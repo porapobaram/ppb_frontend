@@ -8,7 +8,6 @@ const store = configureStore({});
 
 ReactDOM.render(
   <Provider store={store}>
-    <Login />
   </Provider>,
   document.getElementById("root")
 );
