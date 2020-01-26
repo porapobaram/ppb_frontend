@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.button_wrapper {
+  width: 100%;
+  height: 100vh;
+  background: #311951;
+  background: -webkit-gradient(linear, left bottom, left top, from(#311951), color-stop(50%, #412266));
+  background: linear-gradient(0deg, #311951 0%, #412266 50%);
+}
+
+.button_wrapper .button_container {
+  background: url("../../../../assets/img/Circles.png") center/cover no-repeat;
+  width: inherit;
+  height: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.button_wrapper .button_container a {
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  font-size: 40px;
+  width: 225px;
+  height: 225px;
+  line-height: 225px;
+  font-family: "Roboto", sans-serif;
+  background: #2d68b7;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(40%, #2d68b7), to(#0196ff));
+  background: linear-gradient(0deg, #2d68b7 40%, #0196ff 100%);
+  border-radius: 50%;
+}
+/*# sourceMappingURL=ButtonComponent.css.map */

@@ -2,8 +2,10 @@ import React from "react";
 
 const ButtonComponent = ({}) => {
   return (
-    <div>
-      {/* <FbLoginBtn onClick={} /> */}
+    <div className="button_wrapper">
+      <div className="button_container">
+        <a href="google.com">Пора!</a>
+      </div>
     </div>
   );
 };
