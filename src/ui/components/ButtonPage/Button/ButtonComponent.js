@@ -1,10 +1,16 @@
 import React from "react";
 
-const ButtonComponent = ({}) => {
+const ButtonComponent = () => {
+  const clickFunc = () => {
+    console.log("Fetch was here!!!");
+  };
+
   return (
     <div className="button_wrapper">
       <div className="button_container">
-        <a href="google.com">Пора!</a>
+        <button className="button" onClick={clickFunc}>
+          Пора!
+        </button>
       </div>
     </div>
   );

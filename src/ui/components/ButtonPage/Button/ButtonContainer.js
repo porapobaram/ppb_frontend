@@ -3,11 +3,12 @@ import ButtonComponent from "./ButtonComponent";
 // Class HOC, which returns modificated component
 
 class ButtonContainer extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
   }
+
   render() {
-    return <ButtonComponent onClick={{}} />;
+    return <ButtonComponent />;
   }
 }
 
