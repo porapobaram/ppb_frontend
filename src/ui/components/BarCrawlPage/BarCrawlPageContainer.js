@@ -1,8 +1,9 @@
 import React, { Component } from "react";
-import BarCrawlPageComponent from "./BarCrawlPageComponent";
-import { data } from "./data";
-import { uid } from "react-uid";
+// import BarCrawlPageComponent from "./BarCrawlPageComponent";
+import { test } from "./data";
+// import { uid } from "react-uid";
 import Slider from "react-slick";
+import BarCrawlItem from "../BarCrawlItem";
 
 class BarCrawlPageContainer extends Component {
   constructor(props) {
@@ -19,8 +20,8 @@ class BarCrawlPageContainer extends Component {
     };
     return (
       <Slider {...settings}>
-        {data.map(item => {
-          return <BarCrawlPageComponent key={uid(item)} item={item} />;
+        {test.map(item => {
+          return <BarCrawlItem key={item.bcId} item={item} />;
         })}
       </Slider>
     );
