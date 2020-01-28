@@ -1,8 +1,8 @@
 import { combineReducers } from "redux";
-import app from "./app/reducer";
+import barPage from "./barPage/reducer";
 
 const allReducers = combineReducers({
-  app
+  barPage
 });
 
 export default allReducers;

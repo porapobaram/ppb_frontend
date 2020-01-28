@@ -1,0 +1,1 @@
+export const SET_BAR_INFO = 'SET_BAR_INFO';
