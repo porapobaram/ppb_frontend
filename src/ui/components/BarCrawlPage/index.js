@@ -1,3 +1,3 @@
-import BarCrawlPageContainer from "./BarCrawlPageContainer";
+import BarCrawlPage from "./BarCrawlPage";
 
-export default BarCrawlPageContainer;
+export default BarCrawlPage;

@@ -1,14 +1,17 @@
 import React, { Component } from "react";
-// import BarCrawlPageComponent from "./BarCrawlPageComponent";
 import { test } from "./data";
-// import { uid } from "react-uid";
 import Slider from "react-slick";
-import BarCrawlItem from "../BarCrawlItem";
+import BarCrawlItem from "./BarCrawlItem";
 
-class BarCrawlPageContainer extends Component {
+class BarCrawlPage extends Component {
   constructor(props) {
     super(props);
+    this.onClickHandler = this.onClickHandler.bind(this);
   }
+
+  onClickHandler = () => {
+    console.log("test");
+  };
 
   render() {
     const settings = {
@@ -21,11 +24,17 @@ class BarCrawlPageContainer extends Component {
     return (
       <Slider {...settings}>
         {test.map(item => {
-          return <BarCrawlItem key={item.bcId} item={item} />;
+          return (
+            <BarCrawlItem
+              onClickHandler={this.onClickHandler}
+              key={item.bcId}
+              item={item}
+            />
+          );
         })}
       </Slider>
     );
   }
 }
 
-export default BarCrawlPageContainer;
+export default BarCrawlPage;
