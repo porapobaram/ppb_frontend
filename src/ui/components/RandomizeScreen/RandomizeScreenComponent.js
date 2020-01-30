@@ -17,3 +17,14 @@ const ButtonComponent = () => {
 };
 
 export default ButtonComponent;
+
+// import React from "react";
+// const LoginPageComponent = ({ onCallbackHandler }) => {
+//   return (
+//     <div>
+//       <FbLoginBtn callback={onCallbackHandler} />
+//     </div>
+//   );
+// };
+
+// export default LoginPageComponent;
