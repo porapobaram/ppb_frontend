@@ -1,4 +1,4 @@
-import ButtonContainer from './RandomizeScreenContainer';
-import './ButtonComponent.scss';
+import RandomizeScreenContainer from './RandomizeScreenContainer';
+import './RandomizeScreenComponent.scss';
 
-export default ButtonContainer;
+export default RandomizeScreenContainer;

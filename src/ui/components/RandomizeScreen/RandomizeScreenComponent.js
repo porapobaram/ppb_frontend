@@ -1,10 +1,6 @@
-import React from "react";
+import React from 'react';
 
-const ButtonComponent = () => {
-  const clickFunc = () => {
-    console.log("Fetch was here!!!");
-  };
-
+const RandomizeScreenComponent = () => {
   return (
     <div className="button_wrapper">
       <div className="button_container">
@@ -16,7 +12,7 @@ const ButtonComponent = () => {
   );
 };
 
-export default ButtonComponent;
+export default RandomizeScreenComponent;
 
 // import React from "react";
 // const LoginPageComponent = ({ onCallbackHandler }) => {
