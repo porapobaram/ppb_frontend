@@ -1,3 +1,3 @@
-import BarCrawlItem from "./BarCrawlItem";
+import BarCrawlItem from './BarCrawlItem';
 
 export default BarCrawlItem;

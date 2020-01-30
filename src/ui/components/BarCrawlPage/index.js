@@ -1,3 +1,3 @@
-import BarCrawlPage from "./BarCrawlPage";
+import BarCrawlPage from './BarCrawlPage';
 
 export default BarCrawlPage;

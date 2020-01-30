@@ -1,7 +1,7 @@
-import React, { Component } from "react";
-import { test } from "./data";
-import Slider from "react-slick";
-import BarCrawlItem from "./BarCrawlItem";
+import React, { Component } from 'react';
+import { test } from './data';
+import Slider from 'react-slick';
+import BarCrawlItem from './BarCrawlItem';
 
 class BarCrawlPage extends Component {
   constructor(props) {
@@ -10,7 +10,7 @@ class BarCrawlPage extends Component {
   }
 
   onClickHandler = () => {
-    console.log("test");
+    console.log('test');
   };
 
   render() {
