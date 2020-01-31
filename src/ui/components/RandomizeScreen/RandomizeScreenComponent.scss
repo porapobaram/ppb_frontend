@@ -13,7 +13,7 @@
     rgba(65, 34, 102, 1) 50%
   );
   .button_container {
-    background: url("../../../../assets/img/Circles.png") center/cover no-repeat;
+    background: url('../../../assets/img/Circles.png') center/cover no-repeat;
     width: inherit;
     height: inherit;
     display: flex;
@@ -27,7 +27,7 @@
       width: 225px;
       height: 225px;
       line-height: 225px;
-      font-family: "Roboto", sans-serif;
+      font-family: 'Roboto', sans-serif;
       background: rgb(45, 104, 183);
       background: linear-gradient(
         0deg,
@@ -35,6 +35,7 @@
         rgba(1, 150, 255, 1) 100%
       );
       border-radius: 50%;
+      border: none;
     }
   }
 }

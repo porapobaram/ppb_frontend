@@ -1,12 +1,12 @@
 import React from 'react';
+import './RandomizeScreenComponent.scss';
 
-const RandomizeScreenComponent = () => {
-  return (
+const RandomizeScreenComponent = ({onClickHandler}) => {
+
+    return (
     <div className="button_wrapper">
       <div className="button_container">
-        <button className="button" onClick={clickFunc}>
-          Пора!
-        </button>
+          <button className="button" onClick={onClickHandler}>Пора!</button>
       </div>
     </div>
   );
@@ -14,7 +14,7 @@ const RandomizeScreenComponent = () => {
 
 export default RandomizeScreenComponent;
 
-// import React from "react";
+
 // const LoginPageComponent = ({ onCallbackHandler }) => {
 //   return (
 //     <div>
