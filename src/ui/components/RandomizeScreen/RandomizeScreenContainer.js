@@ -2,9 +2,10 @@ import React, { Component } from 'react';
 import RandomizeScreenComponent from './RandomizeScreenComponent';
 
 export default class RandomizeScreenContainer extends Component {
-  // constructor(props) {
-  //   super(props);
-  // }
+  constructor(props) {
+    super(props);
+    this.onClickHandler = this.onClickHandler.bind(this);
+  }
   onClickHandler = () => {
     console.log('U clicked')
   };
