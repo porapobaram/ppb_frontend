@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import RandomizeScreenContainer from './ui/components/RandomizeScreen';
+
 class App extends Component {
   render() {
     return (

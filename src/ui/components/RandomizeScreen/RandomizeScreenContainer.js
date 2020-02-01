@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import RandomizeScreenComponent from './RandomizeScreenComponent';
+import {getRandomBar} from "../../../reduxStore/app/actions";
 
 export default class RandomizeScreenContainer extends Component {
   constructor(props) {
@@ -7,7 +8,7 @@ export default class RandomizeScreenContainer extends Component {
     this.onClickHandler = this.onClickHandler.bind(this);
   }
   onClickHandler = () => {
-    console.log('U clicked')
+    getRandomBar()
   };
 
   render() {
@@ -15,18 +16,3 @@ export default class RandomizeScreenContainer extends Component {
   }
 }
 
-
-// class LoginPageContainer extends Component {
-//   constructor(props) {
-//     super(props);
-//     this.onCallbackHandler = this.onCallbackHandler.bind(this);
-//   }
-
-//   //here is logic
-
-//   render() {
-//     return <LoginPageComponent onCallbackHandler={this.onCallbackHandler} />;
-//   }
-// }
-
-// export default LoginPageContainer;
