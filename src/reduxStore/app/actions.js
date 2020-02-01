@@ -6,6 +6,6 @@ export const setInitialState = (data) => (dispatch) => {
 };
 
 export const userUseRandomize = async () => {
-    const data = barApi.getRandomBar();
+    const data = await barApi.getRandomBar();
     console.log(data);
 };

@@ -12,8 +12,7 @@ const requestFactory = async (url, method, data) => {
         if (!res.ok) {
              new Error('Error!');
         }
-        return res.json();
-
+        return await res.json();
     } catch (err) {
          new Error(err);
     }
