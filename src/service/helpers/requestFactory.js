@@ -5,17 +5,17 @@ const requestFactory = async (url, method, data) => {
     const apiUrl = BASIC_API_URL + url;
 
     try {
-        const res = await fetch(url, {
+        const res = await fetch(apiUrl, {
             method: method,
             body: data
         });
         if (!res.ok) {
-            throw new Error('Error!');
+             new Error('Error!');
         }
         return res.json();
 
     } catch (err) {
-        throw new Error(err);
+         new Error(err);
     }
 };
 

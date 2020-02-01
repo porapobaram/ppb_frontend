@@ -8,7 +8,8 @@ export default class RandomizeScreenContainer extends Component {
     this.onClickHandler = this.onClickHandler.bind(this);
   }
   onClickHandler = () => {
-    getRandomBar()
+    getRandomBar();
+    console.log(this.props)
   };
 
   render() {
