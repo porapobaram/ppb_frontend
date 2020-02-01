@@ -5,6 +5,7 @@ import {
     Route,
     Link,
 } from "react-router-dom";
+import FooterContainer from '../src/common/Footer/index';
 
 class App extends Component {
     render() {
@@ -46,7 +47,7 @@ class App extends Component {
                         <p>map</p>
                     </Route>
                 </Switch>
-                {/*footer*/}
+                {FooterContainer}
             </Router>
         )
     }

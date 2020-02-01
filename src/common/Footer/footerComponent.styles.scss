@@ -1,0 +1,35 @@
+.footer {
+    background-color: white;
+    height: 75px;
+    width: 312px;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: space-around; 
+    /* justify-content: space-between; */
+}
+
+.navlink {
+    position: relative;
+    text-decoration: none;
+    color: #0580fb;
+    font-size: 17px;
+    text-align: center;
+    margin-right: 11px;
+    border-bottom: 5px solid #0580fb;
+}
+
+.is-active {
+    position: relative;
+    text-decoration: none;
+    color: #0580fb;
+    font-size: 17px;
+    text-align: center;
+    margin-right: 11px;
+    border-bottom: 5px solid #0580fb;
+}
+
+.imgbar {
+    width: 45px;
+    height: 40px;
+}
