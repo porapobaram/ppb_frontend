@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import './footerComponent.styles.scss';
 import { NavLink } from 'react-router-dom';
+import NewsBar from './png/NewsBar.png';
+import BarCrawl from './png/BarCrawl.png';
+import Randomize from './png/Randomize.png';
+import MapBar from './png/MapBar.png';
 
 class Nav extends Component {
   render(){
@@ -10,7 +14,7 @@ class Nav extends Component {
                   to="/feed" 
                   className="navlink" 
                   activeClassName='is-active'>
-                  <img className="imgbar" src={require('./png/NewsBar.png')} alt="newsbar"></img> 
+                  <img className="imgbar" src={NewsBar} alt="newsbar"></img> 
                   <span>Новости</span>
               </NavLink>
           
@@ -19,7 +23,7 @@ class Nav extends Component {
                   className="navlink" 
                   activeClassName='is-active'
                   onClick={this.onClickHandler}>
-                  <img className="imgbar" src={require('./png/BarCrawl.png')} alt="barcrawlbar"></img> 
+                  <img className="imgbar" src={BarCrawl} alt="barcrawlbar"></img> 
                   <span>Bar crawl</span>
               </NavLink>
           
@@ -29,7 +33,7 @@ class Nav extends Component {
                   className="navlink" 
                   activeClassName='is-active'
                   onClick={this.onClickHandler}>
-                  <img className="imgbar" src={require('./png/Randomize.png')} alt="randombar"></img> 
+                  <img className="imgbar" src={Randomize} alt="randombar"></img> 
                   <span>Randomize</span>
               </NavLink>
           
@@ -38,7 +42,7 @@ class Nav extends Component {
                   className="navlink" 
                   activeClassName='is-active'
                   onClick={this.onClickHandler}>
-                  <img className="imgbar" src={require('./png/MapBar.png')} alt="mapbar"></img> 
+                  <img className="imgbar" src={MapBar} alt="mapbar"></img> 
                   <span>Карта</span>
               </NavLink>
           </div>
