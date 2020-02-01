@@ -1,0 +1,31 @@
+@import '../../styles/colors.scss';
+
+.footer {
+    background-color: $white;
+    height: 75px;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+
+    .navLink {
+        display: flex;
+        flex-direction: column;
+        text-decoration: none;
+        width: 75px;
+        color: #0580fb;
+        font-size: 17px;
+        text-align: center;
+    }
+    
+    .is-active {
+        border-bottom: 5px solid #0580fb;
+    }
+    
+    .imgbar {
+        width: 45px;
+        height: 40px;
+        margin: 0 auto;
+    }
+}
