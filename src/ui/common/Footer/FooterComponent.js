@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import './footerComponent.styles.scss';
 import { NavLink } from 'react-router-dom';
-import NewsBarimg from './png/NewsBar.png';
-import BarCrawlimg from './png/BarCrawl.png';
-import Randomizeimg from './png/Randomize.png';
-import MapBarimg from './png/MapBar.png';
+import newsBarImg from './png/NewsBar.png';
+import barCrawlImg from './png/BarCrawl.png';
+import randomizeImg from './png/Randomize.png';
+import mapBarImg from './png/MapBar.png';
 
 class Nav extends Component {
   render(){
@@ -14,7 +14,7 @@ class Nav extends Component {
                   to="/feed" 
                   className="navlink" 
                   activeClassName='is-active'>
-                  <img className="imgbar" src={NewsBarimg} alt="newsbar"></img> 
+                  <img className="imgbar" src={newsBarImg} alt="newsbar" />
                   <span>Новости</span>
               </NavLink>
           
@@ -23,7 +23,7 @@ class Nav extends Component {
                   className="navlink" 
                   activeClassName='is-active'
                   onClick={this.onClickHandler}>
-                  <img className="imgbar" src={BarCrawlimg} alt="barcrawlbar"></img> 
+                  <img className="imgbar" src={barCrawlImg} alt="barcrawlbar" />
                   <span>Bar crawl</span>
               </NavLink>
           
@@ -33,7 +33,7 @@ class Nav extends Component {
                   className="navlink" 
                   activeClassName='is-active'
                   onClick={this.onClickHandler}>
-                  <img className="imgbar" src={Randomizeimg} alt="randombar"></img> 
+                  <img className="imgbar" src={randomizeImg} alt="randombar" />
                   <span>Randomize</span>
               </NavLink>
           
@@ -42,7 +42,7 @@ class Nav extends Component {
                   className="navlink" 
                   activeClassName='is-active'
                   onClick={this.onClickHandler}>
-                  <img className="imgbar" src={MapBarimg} alt="mapbar"></img> 
+                  <img className="imgbar" src={mapBarImg} alt="mapbar" />
                   <span>Карта</span>
               </NavLink>
           </div>
