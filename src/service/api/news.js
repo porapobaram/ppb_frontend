@@ -8,4 +8,4 @@ const barNewsApi = {
 
         return requestFactory(url, method);
     }
-}
+};

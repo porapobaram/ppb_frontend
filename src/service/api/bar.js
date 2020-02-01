@@ -8,4 +8,4 @@ const barApi = {
 
         return requestFactory(url, method);
     }
-}
+};

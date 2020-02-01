@@ -8,7 +8,7 @@ const requestFactory = async (url, method, data) => {
         const res = await fetch(url, {
             method: method,
             body: data
-        })
+        });
         if (!res.ok) {
             throw new Error('Error!');
         }
@@ -17,6 +17,6 @@ const requestFactory = async (url, method, data) => {
     } catch (err) {
         throw new Error(err);
     }
-}
+};
 
 export { requestFactory };
