@@ -1,7 +1,7 @@
 import { requestFactory } from '../helpers/requestFactory';
 
 // every method returns promise
-const barCrawlApi = {
+export const barCrawlApi = {
     getBarCrawlFeed() {
         const url = '/barCrawl/getBarCrawlFeed';
         const method = 'GET';
