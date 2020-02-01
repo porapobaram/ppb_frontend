@@ -5,7 +5,7 @@ export const setInitialState = (data) => (dispatch) => {
     dispatch({type: actionTypes.SET_INITIAL_STATE, data:data})
 };
 
-export const userRandomizeBar = async () => {
-    const data = await barApi.getRandomBar();
+export const userUseRandomize = async () => {
+    const data = barApi.getRandomBar();
     console.log(data);
 };

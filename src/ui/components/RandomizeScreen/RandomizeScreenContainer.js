@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import RandomizeScreenComponent from './RandomizeScreenComponent';
-import {userRandomizeBar} from "../../../reduxStore/app/actions";
+import {userUseRandomize} from "../../../reduxStore/app/actions";
 
 
 export default class RandomizeScreenContainer extends Component {
@@ -9,8 +9,9 @@ export default class RandomizeScreenContainer extends Component {
     this.onClickHandler = this.onClickHandler.bind(this);
   }
 
-  onClickHandler = (res) => {
-    userRandomizeBar(res)
+  onClickHandler = () => {
+    userUseRandomize()
+
   };
 
   render() {
