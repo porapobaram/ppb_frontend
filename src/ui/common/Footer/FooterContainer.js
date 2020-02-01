@@ -1,11 +1,10 @@
-import React from 'react';
-import Nav from './FooterComponent';
+import React, { Component } from 'react';
+import FooterComponent from './FooterComponent';
 
-const FooterContainer = () => {
-    return (
-        <Nav />
-    )
-    
- };
+class FooterContainer extends Component {
+	render() {
+		return <FooterComponent />;
+	}
+}
 
 export default FooterContainer;
