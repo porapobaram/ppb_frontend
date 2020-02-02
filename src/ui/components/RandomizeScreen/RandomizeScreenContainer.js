@@ -10,8 +10,7 @@ export default class RandomizeScreenContainer extends Component {
   }
 
   onClickHandler = () => {
-    userUseRandomize()
-        .then()
+    userUseRandomize();
   };
 
   render() {

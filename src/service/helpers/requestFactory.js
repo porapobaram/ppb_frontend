@@ -7,7 +7,6 @@ const requestFactory = async (url, method, data) => {
         const res = await fetch(apiUrl, {
             method: method,
             body: data,
-            mode: 'no-cors'
         });
         if (!res.ok) {
              new Error('Error!');
