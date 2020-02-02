@@ -1,20 +1,29 @@
-import React, { Component } from 'react';
-import RandomizeScreenComponent from './RandomizeScreenComponent';
-import {userUseRandomize} from "../../../reduxStore/app/actions";
+import React, { Component } from "react";
+import RandomizeScreenComponent from "./RandomizeScreenComponent";
+import { getRandomBar } from "../../../reduxStore/bar/actions";
+import { connect } from "react-redux";
 
-
-export default class RandomizeScreenContainer extends Component {
+class RandomizeScreenContainer extends Component {
   constructor(props) {
     super(props);
     this.onClickHandler = this.onClickHandler.bind(this);
   }
 
   onClickHandler = () => {
-    userUseRandomize();
+    getRandomBar();
   };
+
+  componentDidMount() {
+    this.props.getRandomBar();
+  }
 
   render() {
     return <RandomizeScreenComponent onClickHandler={this.onClickHandler} />;
   }
 }
 
+const mapDispatchToProps = {
+  getRandomBar
+};
+
+export default connect(null, mapDispatchToProps)(RandomizeScreenContainer);
