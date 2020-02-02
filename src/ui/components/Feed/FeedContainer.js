@@ -6,7 +6,7 @@ import { func } from 'prop-types';
 
 const propTypes = {
 	getNewsFeed: func,
-}
+};
 
 class FeedContainer extends Component {
 	// eslint-disable-next-line no-useless-constructor
