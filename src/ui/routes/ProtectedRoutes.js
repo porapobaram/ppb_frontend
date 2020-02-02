@@ -3,7 +3,7 @@ import { Link, Redirect, Route, Switch } from 'react-router-dom';
 import Footer from '../common/Footer';
 import NotFound from '../components/NotFound';
 import BarCrawlPage from '../components/BarCrawlPage';
-import FeedComponent from "../components/Feed";
+import FeedComponent from '../components/Feed';
 
 const ProtectedRoutes = () => (
 	<div>
@@ -34,7 +34,7 @@ const ProtectedRoutes = () => (
 			</Route>
 			<Route exact path="/feed">
 				{/* news page */}
-                <FeedComponent />
+				<FeedComponent />
 			</Route>
 			<Route exact path="/map">
 				{/* map page */}
