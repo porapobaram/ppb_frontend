@@ -15,6 +15,7 @@ class FeedContainer extends Component {
 	}
 
 	componentDidMount() {
+		// eslint-disable-next-line react/destructuring-assignment
 		this.props.getNewsFeed();
 	}
 

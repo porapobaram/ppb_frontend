@@ -16,6 +16,7 @@ class BarCrawlPageContainer extends Component {
 	}
 
 	componentDidMount() {
+		// eslint-disable-next-line react/destructuring-assignment
 		this.props.getAllBarcrawls();
 	}
 

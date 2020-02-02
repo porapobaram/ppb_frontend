@@ -1,4 +1,15 @@
 import React from 'react';
+import { func, object, string } from 'prop-types';
+
+const propTypes = {
+	item: object,
+	onClickHandler: func,
+	bcImg: string,
+	bcName: string,
+	bcTime: string,
+	bcPrice: string,
+	bcDescription: string,
+};
 
 const BarCrawlItem = ({ item, onClickHandler }) => {
 	const { bcImg, bcName, bcTime, bcPrice, bcDescription } = item;
@@ -15,5 +26,7 @@ const BarCrawlItem = ({ item, onClickHandler }) => {
 		</div>
 	);
 };
+
+BarCrawlItem.propTypes = propTypes;
 
 export default BarCrawlItem;
