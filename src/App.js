@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import Footer from './ui/common/Footer';
+import RandomizeScreenContainer from "./ui/components/RandomizeScreen";
 
 class App extends Component {
 	render() {
@@ -26,7 +27,7 @@ class App extends Component {
 						<p>login</p>
 					</Route>
 					<Route path="/randomizer">
-						{/* bar randomizer page */}
+						<RandomizeScreenContainer />
 						<p>random</p>
 					</Route>
 					<Route path="/barcrawl">
