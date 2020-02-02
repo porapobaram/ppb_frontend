@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import Footer from './ui/common/Footer';
+import LoginPageComponent from './ui/components/LoginPage/LoginPageComponent'
 
 class App extends Component {
 	render() {
@@ -8,21 +9,25 @@ class App extends Component {
 			<Router>
 				{/* header */}
 				{/* start header example */}
-				<ul>
-					<li>
-						<Link to="/">Home</Link>
-					</li>
-					<li>
-						<Link to="/randomizer">randomizer</Link>
-					</li>
-					<li>
-						<Link to="/barcrawl">barcrawl</Link>
-					</li>
-				</ul>
+				<Route path='/login' exact={true}>
+					<LoginPageComponent />
+				</Route>
+
 				{/* end header example */}
 				<Switch>
+					<ul>
+						<li>
+							<Link to="/">Home</Link>
+						</li>
+						<li>
+							<Link to="/randomizer">randomizer</Link>
+						</li>
+						<li>
+							<Link to="/barcrawl">barcrawl</Link>
+						</li>
+					</ul>
 					<Route exact path="/">
-						{/* login page */}
+						<LoginPageComponent />
 						<p>login</p>
 					</Route>
 					<Route path="/randomizer">
@@ -41,8 +46,9 @@ class App extends Component {
 						{/* map page */}
 						<p>map</p>
 					</Route>
+					<Footer />
 				</Switch>
-				<Footer />
+
 			</Router>
 		);
 	}
