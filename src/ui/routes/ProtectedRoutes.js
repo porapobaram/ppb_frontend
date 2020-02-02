@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, Route, Switch } from 'react-router-dom';
+import { Link, Redirect, Route, Switch } from 'react-router-dom';
 import Footer from '../common/Footer';
 import NotFound from '../components/NotFound';
 
@@ -19,6 +19,9 @@ const ProtectedRoutes = () => (
 		</ul>
 		{/* header placement end */}
 		<Switch>
+			<Route exact path="/">
+				<Redirect to="/randomizer" />
+			</Route>
 			<Route exact path="/randomizer">
 				{/* bar randomizer page */}
 				<p>random</p>
