@@ -1,29 +1,30 @@
-import React, { Component } from "react";
-import RandomizeScreenComponent from "./RandomizeScreenComponent";
-import { getRandomBar } from "../../../reduxStore/bar/actions";
-import { connect } from "react-redux";
+import React, * as react from 'react';
+import RandomizeScreenComponent from './RandomizeScreenComponent';
+import { getRandomBar } from '../../../reduxStore/bar/actions';
+import { connect } from 'react-redux';
 
-class RandomizeScreenContainer extends Component {
-  constructor(props) {
-    super(props);
-    this.onClickHandler = this.onClickHandler.bind(this);
-  }
+class RandomizeScreenContainer extends react.Component {
+	constructor(props) {
+		super(props);
+		this.onClickHandler = this.onClickHandler.bind(this);
+	}
 
-  onClickHandler = () => {
-    getRandomBar();
-  };
+	// eslint-disable-next-line react/sort-comp
+	onClickHandler = () => {
+		getRandomBar();
+	};
 
-  componentDidMount() {
-    this.props.getRandomBar();
-  }
+	componentDidMount() {
+		this.props.getRandomBar();
+	}
 
-  render() {
-    return <RandomizeScreenComponent onClickHandler={this.onClickHandler} />;
-  }
+	render() {
+		return <RandomizeScreenComponent onClickHandler={this.onClickHandler} />;
+	}
 }
 
 const mapDispatchToProps = {
-  getRandomBar
+	getRandomBar,
 };
 
 export default connect(null, mapDispatchToProps)(RandomizeScreenContainer);
