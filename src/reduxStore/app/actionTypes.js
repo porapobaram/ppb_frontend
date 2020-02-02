@@ -1,1 +1,0 @@
-export const SET_INITIAL_STATE = 'SET_INITIAL_STATE';
