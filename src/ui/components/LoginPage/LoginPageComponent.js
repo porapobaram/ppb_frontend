@@ -1,5 +1,5 @@
 import React from 'react';
-import './LoginPageComponent.css';
+import './LoginPageComponent.scss';
 import FbLoginButton from './FbLoginButton';
 import Logo from './logo-ppb.png';
 import DotsParallax from './DotsParallax';
@@ -16,22 +16,19 @@ import DotsParallax from './DotsParallax';
 // export default LoginPageComponent;
 
 class LoginPageComponent extends React.Component {
-
-  render() {
-    return (
-      <div className="Wrapper">
-        <DotsParallax />
-        <div>
-          <img className="logo" src={Logo} alt="" />
-        </div>
-        <div>
-          <FbLoginButton />
-        </div>
-
-      </div>
-    );
-  }
-
+	render() {
+		return (
+			<div className="Wrapper">
+				<DotsParallax />
+				<div>
+					<img className="logo" src={Logo} alt="" />
+				</div>
+				<div>
+					<FbLoginButton />
+				</div>
+			</div>
+		);
+	}
 }
 
 export default LoginPageComponent;
