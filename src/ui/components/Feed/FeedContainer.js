@@ -1,21 +1,24 @@
-import React, { Component } from "react";
-import FeedComponent from "./FeedComponent";
-import { getNewsFeed } from "../../../reduxStore/news/actions";
-import { connect } from "react-redux";
+import React, { Component } from 'react';
+import FeedComponent from './FeedComponent';
+import { getNewsFeed } from '../../../reduxStore/news/actions';
+import { connect } from 'react-redux';
 
 class FeedContainer extends Component {
-  constructor(props) {
-    super(props);
-  }
-  componentDidMount() {
-    this.props.getNewsFeed();
-  }
+	// eslint-disable-next-line no-useless-constructor
+	constructor(props) {
+		super(props);
+	}
 
-  render() {
-    return <FeedComponent />;
-  }
+	componentDidMount() {
+		console.log('test');
+		this.props.getNewsFeed();
+	}
+
+	render() {
+		return <FeedComponent />;
+	}
 }
 const mapDispatchToProps = {
-  getNewsFeed
+	getNewsFeed,
 };
 export default connect(null, mapDispatchToProps)(FeedContainer);

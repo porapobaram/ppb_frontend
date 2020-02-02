@@ -1,8 +1,13 @@
 import React, { Component } from 'react';
 import BarCrawlPageComponent from './BarCrawlPageComponent';
 import { connect } from 'react-redux';
+import { func } from 'prop-types';
 
 import { getAllBarcrawls } from '../../../reduxStore/barCrawl/actions';
+
+const propTypes = {
+	getAllBarcrawls: func,
+};
 
 class BarCrawlPageContainer extends Component {
 	constructor(props) {
@@ -29,6 +34,8 @@ class BarCrawlPageContainer extends Component {
 		return <BarCrawlPageComponent onClickHandler={this.onClickHandler} settings={settings} />;
 	}
 }
+
+BarCrawlPageContainer.propTypes = propTypes;
 
 const mapDispatchToProps = { getAllBarcrawls };
 
