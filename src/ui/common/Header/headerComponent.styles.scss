@@ -1,0 +1,35 @@
+@font-face {
+    font-family: 'Roboto-Regular';
+    src: url('../../fonts/Roboto-Regular.ttf');
+}
+
+@import '../../styles/colors.scss';
+
+.header {
+    background-color: $main-purple;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 12px 0;
+    .arrow_back-header {
+        img {
+            width: 19.5px;
+        }
+    }
+    .logo_header {
+        padding-left: 24px;
+        img {
+            width: 120px;
+        }
+    }
+    .profile_header {
+        text-align: center;
+        img {
+            width: 41px;
+        }
+        p {
+            font-family: 'Roboto-Regular';
+            font-size: 17px;
+        }
+    }
+}

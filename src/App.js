@@ -1,25 +1,13 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import Footer from './ui/common/Footer';
+import Header from './ui/common/Header';
 
 class App extends Component {
 	render() {
 		return (
 			<Router>
-				{/* header */}
-				{/* start header example */}
-				<ul>
-					<li>
-						<Link to="/">Home</Link>
-					</li>
-					<li>
-						<Link to="/randomizer">randomizer</Link>
-					</li>
-					<li>
-						<Link to="/barcrawl">barcrawl</Link>
-					</li>
-				</ul>
-				{/* end header example */}
+				<Header />
 				<Switch>
 					<Route exact path="/">
 						{/* login page */}
