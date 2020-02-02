@@ -2,6 +2,7 @@ import React from 'react';
 import { Link, Redirect, Route, Switch } from 'react-router-dom';
 import Footer from '../common/Footer';
 import NotFound from '../components/NotFound';
+import BarCrawlPage from '../components/BarCrawlPage';
 
 const ProtectedRoutes = () => (
 	<div>
@@ -28,8 +29,7 @@ const ProtectedRoutes = () => (
 				<p>random</p>
 			</Route>
 			<Route exact path="/barcrawl">
-				{/* barcrawl page */}
-				<p>barcrawl</p>
+				<BarCrawlPage />
 			</Route>
 			<Route exact path="/feed">
 				{/* news page */}
