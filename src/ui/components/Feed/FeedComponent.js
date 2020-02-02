@@ -1,7 +1,5 @@
 import React, { Fragment } from "react";
 import "./FeedComponent.scss";
-import "font-awesome/css/font-awesome.min.css";
-// import FbLoginBtn from '../../common/FbLoginButton'
 
 const FeedComponent = () => {
   return (

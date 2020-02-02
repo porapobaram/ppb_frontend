@@ -1,19 +1,21 @@
 import React, { Component } from "react";
 import FeedComponent from "./FeedComponent";
-// Class HOC, which returns modificated component
+import { getNewsFeed } from "../../../reduxStore/news/actions";
+import { connect } from "react-redux";
 
 class FeedContainer extends Component {
   constructor(props) {
     super(props);
   }
+  componentDidMount() {
+    this.props.getNewsFeed();
+  }
 
-  //here is logic
-  // onCallbackHandler(params) {
-  //   console.log(params);
-  // }
   render() {
     return <FeedComponent />;
   }
 }
-
-export default FeedContainer;
+const mapDispatchToProps = {
+  getNewsFeed
+};
+export default connect(null, mapDispatchToProps)(FeedContainer);
