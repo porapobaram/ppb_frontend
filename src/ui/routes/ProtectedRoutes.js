@@ -18,6 +18,7 @@ const ProtectedRoutes = () => (
 			</li>
 		</ul>
 		{/* header placement end */}
+		{/* https://stackoverflow.com/questions/51796344/how-to-skip-header-and-footer-for-certain-routes-in-reactjs */}
 		<Switch>
 			<Route exact path="/">
 				<Redirect to="/randomizer" />
