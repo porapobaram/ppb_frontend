@@ -2,6 +2,11 @@ import React, { Component } from 'react';
 import FeedComponent from './FeedComponent';
 import { getNewsFeed } from '../../../reduxStore/news/actions';
 import { connect } from 'react-redux';
+import { func } from 'prop-types';
+
+const propTypes = {
+	getNewsFeed: func,
+}
 
 class FeedContainer extends Component {
 	// eslint-disable-next-line no-useless-constructor
@@ -10,7 +15,6 @@ class FeedContainer extends Component {
 	}
 
 	componentDidMount() {
-		console.log('test');
 		this.props.getNewsFeed();
 	}
 
@@ -18,7 +22,11 @@ class FeedContainer extends Component {
 		return <FeedComponent />;
 	}
 }
+
+FeedContainer.propTypes = propTypes;
+
 const mapDispatchToProps = {
 	getNewsFeed,
 };
+
 export default connect(null, mapDispatchToProps)(FeedContainer);
