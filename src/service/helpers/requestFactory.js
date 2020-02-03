@@ -7,7 +7,7 @@ const requestFactory = async (url, method, data) => {
         const res = await fetch(apiUrl, {
             method: method,
             body: data,
-        });
+		});
         if (!res.ok) {
              new Error('Error!');
         }
