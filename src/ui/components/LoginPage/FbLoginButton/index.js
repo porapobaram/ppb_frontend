@@ -1,3 +1,3 @@
-import FbLoginButton from './FbLoginButton'
+import FbLoginButton from './FbLoginButton';
 
-export default FbLoginButton
+export default FbLoginButton;

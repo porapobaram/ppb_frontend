@@ -2,7 +2,8 @@ import React from 'react';
 import { Link, Redirect, Route, Switch } from 'react-router-dom';
 import Footer from '../common/Footer';
 import NotFound from '../components/NotFound';
-import RandomizeScreenContainer from '../components/RandomizeScreen/RandomizeScreenContainer';
+import BarCrawlPage from '../components/BarCrawlPage';
+import FeedPage from '../components/FeedPage';
 
 const ProtectedRoutes = () => (
 	<div>
@@ -19,6 +20,7 @@ const ProtectedRoutes = () => (
 			</li>
 		</ul>
 		{/* header placement end */}
+		{/* https://stackoverflow.com/questions/51796344/how-to-skip-header-and-footer-for-certain-routes-in-reactjs */}
 		<Switch>
 			<Route exact path="/">
 				<Redirect to="/randomizer" />
@@ -28,12 +30,11 @@ const ProtectedRoutes = () => (
 				<p>random</p>
 			</Route>
 			<Route exact path="/barcrawl">
-				{/* barcrawl page */}
-				<p>barcrawl</p>
+				<BarCrawlPage />
 			</Route>
 			<Route exact path="/feed">
 				{/* news page */}
-				<p>feed</p>
+				<FeedPage />
 			</Route>
 			<Route exact path="/map">
 				{/* map page */}

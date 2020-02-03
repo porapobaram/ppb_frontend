@@ -4,7 +4,8 @@ import { ProtectedRoutes } from './ui/routes/ProtectedRoutes';
 import { PublicRoutes } from './ui/routes/PublicRoutes';
 import NotFound from './ui/components/NotFound';
 
-class App extends react.Component {
+// eslint-disable-next-line react/prefer-stateless-function
+class App extends Component {
 	render() {
 		return (
 			<Router>

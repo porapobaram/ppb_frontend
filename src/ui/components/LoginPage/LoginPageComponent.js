@@ -15,6 +15,7 @@ import DotsParallax from './DotsParallax';
 
 // export default LoginPageComponent;
 
+// eslint-disable-next-line react/prefer-stateless-function
 class LoginPageComponent extends React.Component {
 	render() {
 		return (
