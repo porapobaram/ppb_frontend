@@ -1,0 +1,95 @@
+<svg width="286" height="483.2" xmlns="http://www.w3.org/2000/svg">
+ <title>wave</title>
+
+ <g>
+  <title>background</title>
+  <rect fill="none" id="canvas_background" height="485.2" width="288" y="-1" x="-1"/>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <g id="Ellipse_3">
+   <circle id="svg_1" fill="#dd6a3e" r="5.4" cy="149.790329" cx="21.910241"/>
+  </g>
+  <g id="Ellipse_3-2">
+   <circle id="svg_2" fill="#dd6a3e" transform="rotate(-9.220000267028809 -11.149752616882378,37.65032577514648) " r="5.4" cy="81.270329" cx="169.500242"/>
+  </g>
+  <g id="Ellipse_3_copy">
+   <circle id="svg_3" fill="#487ff6" r="5.4" cy="89.140329" cx="228.800241"/>
+  </g>
+  <g id="Ellipse_3_copy_2">
+   <path id="svg_4" fill="#487ff6" d="m251.780241,439.560329a5.4,5.4 0 1 0 5.4,5.4a5.4,5.4 0 0 0 -5.4,-5.4z"/>
+  </g>
+  <g id="Ellipse_3_copy_2-2">
+   <circle id="svg_5" fill="#487ff6" transform="rotate(-9.220000267028809 -10.259754180908178,27.98031806945801) " r="5.4" cy="61.210329" cx="110.840241"/>
+  </g>
+  <g id="Ellipse_3_copy_3">
+   <circle id="svg_6" fill="#487ff6" transform="rotate(-4.070000171661377 -31.919755935669095,20.620332717895515) " r="5.4" cy="384.990329" cx="131.090243"/>
+  </g>
+  <g id="Ellipse_4">
+   <circle id="svg_7" fill="#db7ab9" transform="rotate(-5.650000095367432 -37.129749298095525,34.12031936645508) " r="10.59" cy="357.15033" cx="210.42024"/>
+  </g>
+  <g id="Ellipse_4_copy_14">
+   <path id="svg_8" fill="#f1d433" d="m174.170241,391.630329a7.69,7.69 0 1 0 7.68,7.68a7.68,7.68 0 0 0 -7.68,-7.68z"/>
+  </g>
+  <g id="Ellipse_4_copy_14-2">
+   <path id="svg_9" fill="#f1d433" d="m166.500241,437.350329a7.69,7.69 0 1 0 7.69,7.69a7.68,7.68 0 0 0 -7.69,-7.69z"/>
+  </g>
+  <g id="Ellipse_4_copy_15">
+   <circle id="svg_10" fill="#dd6a3e" transform="rotate(-80.77999877929688 -276.4496765136719,378.75045776367193) " r="9.35" cy="722.690329" cx="-193.629771"/>
+  </g>
+  <g id="Ellipse_4_copy_15-2">
+   <circle id="svg_11" fill="#dd6a3e" r="9.35" cy="452.850329" cx="40.450241"/>
+  </g>
+  <g id="Ellipse_4_copy_17">
+   <circle id="svg_12" fill="#dd6a3e" transform="rotate(-4.730000019073486 -15.929770469665389,24.530336380004883) " r="9.35" cy="146.860329" cx="177.620241"/>
+  </g>
+  <g id="Ellipse_4_copy_16">
+   <circle id="svg_13" fill="#db7ab9" transform="rotate(-9.220000267028809 -17.029737472534176,19.17032623291016) " r="6.02" cy="89.980329" cx="46.070241"/>
+  </g>
+  <g id="Ellipse_4_copy_16-2">
+   <circle id="svg_14" fill="#dd6a3e" transform="rotate(-9.220000267028809 -44.56974792480482,54.240345001220696) " r="6.02" cy="313.430331" cx="222.240242"/>
+  </g>
+  <g id="Ellipse_4_copy_12">
+   <path id="svg_15" fill="#487ff6" d="m17.340241,394.680329a4.57,4.57 0 1 0 4.57,4.57a4.57,4.57 0 0 0 -4.57,-4.57z"/>
+  </g>
+  <g id="Ellipse_4_copy_11">
+   <path id="svg_16" fill="#f1d433" d="m263.500241,72.940329a3.12,3.12 0 1 0 3.12,3.11a3.11,3.11 0 0 0 -3.12,-3.11z"/>
+  </g>
+  <g id="Ellipse_4_copy_18">
+   <path id="svg_17" fill="#f1d433" d="m148.000241,130.270329a3.12,3.12 0 1 0 3.11,3.11a3.11,3.11 0 0 0 -3.11,-3.11z"/>
+  </g>
+  <g id="Ellipse_4_copy_8">
+   <path id="svg_18" fill="#db7ab9" d="m268.880241,157.070329a3.12,3.12 0 1 0 3.12,3.08a3.12,3.12 0 0 0 -3.12,-3.08z"/>
+  </g>
+  <g id="Ellipse_4_copy_8-2">
+   <path id="svg_19" fill="#db7ab9" d="m228.910241,25.920329a3.12,3.12 0 1 0 3.12,3.12a3.12,3.12 0 0 0 -3.12,-3.12z"/>
+  </g>
+  <g id="Ellipse_4_copy_22">
+   <path id="svg_20" fill="#487ff6" d="m95.240241,105.340329a3.12,3.12 0 1 0 3.11,3.12a3.12,3.12 0 0 0 -3.11,-3.12z"/>
+  </g>
+  <g id="Ellipse_4_copy_21">
+   <path id="svg_21" fill="#d87faf" d="m219.030241,414.060329a3.12,3.12 0 1 0 3.12,3.11a3.11,3.11 0 0 0 -3.12,-3.11z"/>
+  </g>
+  <g id="Ellipse_4_copy_20">
+   <path id="svg_22" fill="#db7ab9" d="m14.120241,217.920329a3.12,3.12 0 1 0 3.11,3.12a3.12,3.12 0 0 0 -3.11,-3.12z"/>
+  </g>
+  <g id="Ellipse_4_copy_7">
+   <circle id="svg_23" fill="#f1d433" r="3.12" cy="350.560329" cx="33.210241"/>
+  </g>
+  <g id="Ellipse_4_copy">
+   <circle id="svg_24" fill="#f1d433" r="13.5" cy="174.510329" cx="53.690241"/>
+  </g>
+  <g id="Ellipse_4_copy_4">
+   <circle id="svg_25" fill="#f1d433" transform="rotate(-45 -62.29975128173839,238.5802307128906) " r="7.06" cy="421.150331" cx="187.950238"/>
+  </g>
+  <g id="Ellipse_4_copy_4-2">
+   <path id="svg_26" fill="#f1d433" d="m29.090241,15.000329a7.06,7.06 0 1 0 7.06,7.06a7.06,7.06 0 0 0 -7.06,-7.06z"/>
+  </g>
+  <g id="Ellipse_4_copy_4-3">
+   <circle id="svg_27" fill="#487ff6" transform="rotate(-67.5 -229.23983764648438,219.55023193359372) " r="7.06" cy="491.930332" cx="-182.419764"/>
+  </g>
+  <g id="Ellipse_4_copy_4-4">
+   <path id="svg_28" fill="#487ff6" d="m85.770241,417.210329a7.06,7.06 0 1 0 7.06,7.06a7.06,7.06 0 0 0 -7.06,-7.06z"/>
+  </g>
+ </g>
+</svg>

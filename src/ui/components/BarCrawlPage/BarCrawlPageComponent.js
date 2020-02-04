@@ -1,6 +1,5 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
-import Slider from 'react-slick';
 import BarCrawlItem from './BarCrawlItem';
 import { test } from './data';
 import { object, func } from 'prop-types';
@@ -10,7 +9,8 @@ const propTypes = {
 	onClickHandler: func,
 };
 
-const BarCrawlPageComponent = ({ settings, onClickHandler }) => (
+// eslint-disable-next-line react/prop-types
+const BarCrawlPageComponent = ({ settings, onClickHandler, Slider }) => (
 	<div>
 		<Slider {...settings}>
 			{test.map(item => {
