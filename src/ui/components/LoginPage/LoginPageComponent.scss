@@ -1,12 +1,26 @@
-.Wrapper {
-    background: url(./background.jpg) no-repeat center / cover ;
-    
-    .logo {        
-        padding-top: 150px;
-        padding-bottom: 260px;
-        height: 110px;
-        width: 260px;
-        margin-left: 55px
-    }
-    
-}
+@import '../../styles/colors.scss';
+
+.Wrapper {  
+    background: $main-purple; 
+	width: 100%;
+	height: 100vh;
+    .logo {
+		position: relative;
+		width: 100%;
+		height: 50vh;
+        .logo-img {
+            width: 240px;
+			position: relative;
+			left: 50%;
+			top: 55%;
+			transform: translate(-50%, -55%);
+        };    
+        .dots-img {
+            position: absolute;
+            width: 300px; 
+			left: 50%;
+			top: 55%;
+			transform: translate(-50%, -55%);
+        };        
+    };
+};

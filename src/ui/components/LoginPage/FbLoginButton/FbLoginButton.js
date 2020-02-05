@@ -1,9 +1,8 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { FacebookLogin } from 'react-facebook-login-component';
 import './FbLoginButton.scss';
-import LogoFb from './logo-facebook.png';
 
-class LoginButton extends React.Component {
+class LoginButton extends Component {
 	responseFacebook(response) {
 		console.log(response);
 	}
@@ -11,18 +10,20 @@ class LoginButton extends React.Component {
 	render() {
 		return (
 			<div className="Login">
-				<div className="arrow" />
-				<div>
-					<img className="logo-facebook" src={LogoFb} alt="" />
+				<div className='button-container'>
+					<div>
+						<div className="arrow"></div>
+						<span className='facebook-text'>Войти через</span>
+						<span className='facebook-logo-text'>facebook</span>
+					</div>
+					<FacebookLogin
+						socialId="200279244446400"
+						fields="name,email,picture"
+						responseHandler={this.responseFacebook}
+						version="v3.0"
+						className="facebook-login"
+					/>
 				</div>
-				<FacebookLogin
-					socialId="200279244446400"
-					fields="name,email,picture"
-					responseHandler={this.responseFacebook}
-					version="v3.0"
-					className="facebook-login"
-					buttonText="Войти через"
-				/>
 			</div>
 		);
 	}
