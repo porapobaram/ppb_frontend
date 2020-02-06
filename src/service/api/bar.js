@@ -6,6 +6,6 @@ export const barApi = {
 		const url = '/bar/getRandomBar';
 		const method = 'GET';
 
-        return requestFactory(url, method);
-    }
+		return requestFactory(url, method);
+	},
 };
