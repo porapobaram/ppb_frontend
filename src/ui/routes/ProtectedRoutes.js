@@ -4,6 +4,7 @@ import Footer from '../common/Footer';
 import NotFound from '../components/NotFound';
 import BarCrawlPage from '../components/BarCrawlPage';
 import FeedPage from '../components/FeedPage';
+import RandomizeScreenContainer from "../components/RandomizeScreen/RandomizeScreenContainer";
 
 const ProtectedRoutes = () => (
 	<div>
@@ -26,7 +27,7 @@ const ProtectedRoutes = () => (
 				<Redirect to="/randomizer" />
 			</Route>
 			<Route exact path="/randomizer">
-				{/* bar randomizer page */}
+				<RandomizeScreenContainer />
 				<p>random</p>
 			</Route>
 			<Route exact path="/barcrawl">

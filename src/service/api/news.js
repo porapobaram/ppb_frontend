@@ -6,6 +6,6 @@ export const barNewsApi = {
 		const url = '/news/getNewsFeed';
 		const method = 'GET';
 
-		return requestFactory(url, method);
-	},
+        return requestFactory(url, method);
+    }
 };
