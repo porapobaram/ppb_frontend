@@ -26,7 +26,7 @@ const ProtectedRoutes = () => (
 				<Redirect to="/randomizer" />
 			</Route>
 			<Route exact path="/randomizer">
-				{/* bar randomizer page */}
+				<RandomizeScreenContainer />
 				<p>random</p>
 			</Route>
 			<Route exact path="/barcrawl">

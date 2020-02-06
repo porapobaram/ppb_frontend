@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, * as react from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { ProtectedRoutes } from './ui/routes/ProtectedRoutes';
 import { PublicRoutes } from './ui/routes/PublicRoutes';
