@@ -6,6 +6,7 @@ const SlideComponent = ({ image }) => {
     backgroundImage: `url(${image})`,
   }
   return <div className="slide-block" style={styles}></div>
+  
 }
 
 export default SlideComponent;

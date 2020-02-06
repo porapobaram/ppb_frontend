@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component, Fragment } from 'react';
 import Slider from 'react-slick';
 
 // npm install react-slik slick-carousel 
@@ -10,7 +10,7 @@ import './SliderComponent.scss';
 
 class SliderComponent extends Component {
 
-    constructor(props){
+    constructor(props) {
         super(props)
 
         this.state = {
@@ -38,19 +38,24 @@ class SliderComponent extends Component {
             arrows: false
         };
 
-        return(
-            
-            <div className="slider-wrapper">
-                <Slider className="slider-block" {...settings}>
-                    {
-                        this.state.images.map((image, i) => (
-                        <SlideComponent key={i} image={image} /> ))
-                    }
-                </Slider>
-            </div>
+        return (
+            <Fragment>
+                <div className="slider-wrapper">
+                    <Slider className="slider-block" {...settings}>
+                        {
+                            this.state.images.map((image, i) => (
+                                <SlideComponent key={i} image={image} />))
+                        }
+                    </Slider>
+                    <div className="wave-block"> 
+                        {/* wave effect (img) */}
+                    </div>
+                </div>
+            </Fragment>
         );
     };
 
 };
 
 export default SliderComponent;
+
