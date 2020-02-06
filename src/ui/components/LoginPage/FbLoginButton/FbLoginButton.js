@@ -10,11 +10,11 @@ class LoginButton extends Component {
 	render() {
 		return (
 			<div className="Login">
-				<div className='button-container'>
+				<div className="button-container">
 					<div>
-						<div className="arrow"></div>
-						<span className='facebook-text'>Войти через</span>
-						<span className='facebook-logo-text'>facebook</span>
+						<div className="arrow" />
+						<span className="facebook-text">Войти через</span>
+						<span className="facebook-logo-text">facebook</span>
 					</div>
 					<FacebookLogin
 						socialId="200279244446400"

@@ -16,19 +16,19 @@ import Dots from './dots.png';
 
 // export default LoginPageComponent;
 
+// eslint-disable-next-line react/prefer-stateless-function
 class LoginPageComponent extends Component {
 	render() {
 		return (
 			<div className="Wrapper">
 				<div className="logo">
-					<img className='logo-img' src={Logo} alt="Logo" />
-					<img className='dots-img' src={Dots} alt="Dots" />
+					<img className="logo-img" src={Logo} alt="Logo" />
+					<img className="dots-img" src={Dots} alt="Dots" />
 				</div>
 				<div>
 					<FbLoginButton />
 				</div>
 			</div>
-
 		);
 	}
 }
