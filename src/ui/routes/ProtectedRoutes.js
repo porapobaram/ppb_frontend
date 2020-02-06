@@ -4,7 +4,7 @@ import Footer from '../common/Footer';
 import NotFound from '../components/NotFound';
 import BarCrawlPage from '../components/BarCrawlPage';
 import FeedPage from '../components/FeedPage';
-import RandomizeScreenContainer from "../components/RandomizeScreen/RandomizeScreenContainer";
+import RandomizeScreenContainer from '../components/RandomizeScreen/RandomizeScreenContainer';
 
 const ProtectedRoutes = () => (
 	<div>
