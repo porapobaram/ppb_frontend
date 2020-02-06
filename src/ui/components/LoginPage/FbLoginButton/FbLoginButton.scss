@@ -1,0 +1,47 @@
+.Login {
+    text-align: center;
+    
+    .arrow {
+      display: flex;
+      justify-content: center;
+      margin: auto;
+      width: 15px;
+      height: 15px;
+      border-right: 3px solid #fdd605;
+      border-bottom: 3px solid #fdd605;
+      transform: rotate(-45deg);
+      position: absolute;
+      margin-top: 23px;
+      margin-left: 23px;
+      z-index: 1;
+    }
+    .logo-facebook {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    position: absolute;
+    height: 25px;
+    width: 105px;
+    margin-left: 225px;
+    margin-top: 16px;
+    z-index: 1;
+    }
+  .facebook-login {
+    color: #fff;
+    text-align: justify;
+    font-family: 'Roboto', sans-serif;
+    background-color: transparent;
+    padding: 15px 0px 15px 30px;
+    text-decoration: none;
+    outline: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: solid #fdd605;
+    font-size: 27px;
+    width: 300px;
+    margin-bottom: 205px; 
+    z-index: 1;
+    position: relative;
+  }
+}
