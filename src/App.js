@@ -5,7 +5,7 @@ import { PublicRoutes } from './ui/routes/PublicRoutes';
 import NotFound from './ui/components/NotFound';
 
 // eslint-disable-next-line react/prefer-stateless-function
-class App extends Component {
+class App extends react.Component {
 	render() {
 		return (
 			<Router>
