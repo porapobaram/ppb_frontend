@@ -1,0 +1,226 @@
+
+
+@mixin line {
+  margin-top: 10px;
+  content: "";
+  display: block;
+  height: 1px;
+  width: 250px;
+  background: #e3e3e3;
+}
+
+@mixin Roboto-regular {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+
+@mixin Roboto-bold {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  height: auto;
+  width: 80%;
+  margin: 0 auto;
+  padding-bottom: 20px;
+  margin-left: 50px;
+  h1 {
+    color: #412366;
+    font-size: 20px;
+    padding-top: 10px;
+    @include Roboto-bold;
+  }
+  p {
+    color: #f77cbf;
+    margin-left: 15px;
+    @include Roboto-regular;
+    font-size: 11px;
+  }
+}
+//--------------------------bonus--------------------------------
+
+.bonus-container {
+  display: flex;
+  width: 100%;
+  height: auto;
+  margin-bottom: 35px;
+  .gift {
+    background: url("../../../assets/img/gift.png") center/cover no-repeat;
+    width: 27px;
+    height: 31px;
+    margin-left: 17px;
+    margin-right: 7px;
+  }
+  .bonus {
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    height: 20px;
+    .blue-text {
+      margin-top: -3px;
+      color: #0480fc;
+      @include Roboto-bold;
+    }
+    .gray-text {
+      margin: 0;
+      color: #777;
+      font-family: "Roboto", sans-serif;
+      font-size: 14px;
+    }
+  }
+}
+
+//--------------------------descripton--------------------------------
+
+.descripton-container {
+  margin-bottom: 30px;
+  .main-descripton {
+    margin-bottom: 10px;
+    display: flex;
+    .information {
+      background: url("../../../assets/img/i.png") center/ cover no-repeat;
+      width: 23px;
+      height: 23px;
+      margin-left: 20px;
+      margin-right: 10px;
+    }
+    p {
+      @include Roboto-regular;
+      color: #666;
+      width: 255px;
+      &:after {
+        @include line;
+      }
+    }
+  }
+  .phone-number {
+    display: flex;
+    .phone-img {
+      background: url("../../../assets/img/phone.png") center/ cover no-repeat;
+      width: 22px;
+      height: 23px;
+      margin-left: 20px;
+      margin-right: 5px;
+      margin-top: -7px;
+    }
+    p {
+      @include Roboto-regular;
+      color: #666;
+      padding-left: 7px;
+      &:after {
+        @include line;
+      }
+    }
+  }
+  .name-container {
+    display: flex;
+    margin: 6px 0;
+    .facebook {
+      background: url("../../../assets/img/fb.png") center/ cover no-repeat;
+      width: 23px;
+      height: 23px;
+      margin-left: 20px;
+      margin-right: 5px;
+    }
+    p {
+      @include Roboto-regular;
+      padding-left: 7px;
+      line-height: 23px;
+      color: #666;
+      &:after {
+        @include line;
+      }
+    }
+  }
+  .time-chedule {
+    display: flex;
+    margin: 5px 0;
+    .bell {
+      background: url("../../../assets/img/clock.png") center/ cover no-repeat;
+      width: 23px;
+      height: 23px;
+      margin-left: 20px;
+      margin-right: 7px;
+    }
+    p {
+      @include Roboto-regular;
+      padding-left: 5px;
+      line-height: 23px;
+      color: #666;
+      &:after {
+        @include line;
+      }
+    }
+  }
+}
+
+//---------------------------diagram--------------------------------
+
+//.diagram-container {
+//  width: 100%;
+//  height: 130px;
+//  margin: 10px 0;
+//}
+
+//---------------------------buttons--------------------------------
+
+.buttons-container {
+  display: flex;
+  .one-more {
+    display: flex;
+    width: 159px;
+    height: 65px;
+    background-color: #f77cbf;
+    color: #fff;
+    border: 1px solid #f77cbf;
+    .arrow {
+      width: 14px;
+      height: 14px;
+      border: 2px solid #eee;
+      // margin: 10px 10px;
+      margin-left: 20px;
+      margin-right: 10px;
+      margin-top: 10px;
+      border-left: none;
+      border-top: none;
+      transform: rotate(135deg);
+    }
+    .btn-block {
+      .top-text {
+        @include Roboto-regular;
+        font-size: 18px;
+        letter-spacing: 1px;
+        text-align: left;
+      }
+      .bottom-text {
+        @include Roboto-regular;
+        font-size: 10px;
+        letter-spacing: 1.5px;
+      }
+    }
+  }
+  .time {
+    @include Roboto-regular;
+    border: 1px solid #0480fc;
+    width: 159px;
+    height: 65px;
+    background-color: #0480fc;
+    letter-spacing: 3px;
+    color: #fff;
+    font-size: 18px;
+    margin-left: 2px;
+    margin-right: -10px;
+  }
+}
+//------------------------------------------------------------------
