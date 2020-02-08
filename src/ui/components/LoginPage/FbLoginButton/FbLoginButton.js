@@ -17,7 +17,7 @@ class LoginButton extends Component {
 						<span className="facebook-logo-text">facebook</span>
 					</div>
 					<FacebookLogin
-						socialId="200279244446400"
+						socialId=""
 						fields="name,email,picture"
 						responseHandler={this.responseFacebook}
 						version="v3.0"
