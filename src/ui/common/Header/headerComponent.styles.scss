@@ -1,0 +1,36 @@
+@import '../../styles/colors.scss';
+
+@import '../../styles/fonts.scss';
+
+.header {
+    background-color: $main-purple;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 12px 0;
+    .arrow_back-header {
+        img {
+            width: 19.5px;
+        }
+    }
+    .logo_header {
+        padding-left: 24px;
+        img {
+            width: 120px;
+        }
+    }
+    .profile_header {
+        text-align: center;
+        a {
+            text-decoration: none; 
+            color: white;
+        }
+        img {
+            width: 41px;
+        }
+        p {
+            font-family: 'Roboto-Regular';
+            font-size: 17px;
+        }
+    }
+}
