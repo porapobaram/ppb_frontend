@@ -4,9 +4,13 @@
 
 .notfound-wrapper {
     width: 100%;
-	height: calc(100vh - 123px);
+	height: calc(100vh - 157px);
 	position: relative;
-	background-color: $main-purple;
+	background: linear-gradient(
+    0deg,
+    rgba(49, 25, 81, 1) 0%,
+    rgba(65, 34, 102, 1) 50%
+  );
 	.notfound-container {
 		background: url('../../../assets/img/dots.svg') center/cover no-repeat;
 		width: 100%;
@@ -32,7 +36,7 @@
 		position: absolute;
 		bottom: 0;
 		width: 100%;
-		height: 15%;
+		height: 20%;
 		background: url('../../../assets/img/wave.svg') center/cover no-repeat;
 	}
 }
