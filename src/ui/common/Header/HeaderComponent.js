@@ -18,7 +18,7 @@ const HeaderComponent = () => (
 			</Link>
 		</div>
 		<div className="profile_header">
-			<Link style={{ textDecoration: 'none', color: 'white' }} to="/barcrawl">
+			<Link to="/barcrawl">
 				<img src={ProfileHeader} alt="profile" />
 				<p>Profile</p>
 			</Link>

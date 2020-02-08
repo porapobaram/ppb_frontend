@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import HeaderComponent from './HeaderComponent';
 
-export default class HeaderContainer extends Component {
+class HeaderContainer extends Component {
 	render() {
 		return <HeaderComponent />;
 	}
-}
+};
+
+export default HeaderContainer;

@@ -1,9 +1,6 @@
-@font-face {
-    font-family: 'Roboto-Regular';
-    src: url('../../fonts/Roboto-Regular.ttf');
-}
-
 @import '../../styles/colors.scss';
+
+@import '../../styles/fonts.scss';
 
 .header {
     background-color: $main-purple;
@@ -24,6 +21,10 @@
     }
     .profile_header {
         text-align: center;
+        a {
+            text-decoration: none; 
+            color: white;
+        }
         img {
             width: 41px;
         }
