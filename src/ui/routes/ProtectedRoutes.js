@@ -19,7 +19,6 @@ const ProtectedRoutes = () => (
 			</Route>
 			<Route exact path="/randomizer">
 				<RandomizeScreenContainer />
-				<p>random</p>
 			</Route>
 			<Route exact path="/barcrawl">
 				<BarCrawlPage />
