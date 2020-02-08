@@ -6,7 +6,7 @@ import LogoHeader from './png/LogoHeader.png';
 import ProfileHeader from './png/ProfileHeader.png';
 
 const HeaderComponent = () => (
-	<div className="header">
+	<header className="header">
 		<div className="arrow_back-header">
 			<Link to="/">
 				<img src={ArrowHeaderImg} alt="back" />
@@ -23,7 +23,7 @@ const HeaderComponent = () => (
 				<p>Profile</p>
 			</Link>
 		</div>
-	</div>
+	</header>
 );
 
 export default HeaderComponent;

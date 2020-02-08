@@ -5,6 +5,6 @@ class HeaderContainer extends Component {
 	render() {
 		return <HeaderComponent />;
 	}
-};
+}
 
 export default HeaderContainer;
