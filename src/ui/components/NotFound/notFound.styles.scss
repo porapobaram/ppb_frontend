@@ -4,24 +4,18 @@
 
 .notfound-wrapper {
     width: 100%;
-    height: 100vh;
+	height: calc(100vh - 123px);
 	position: relative;
 	background-color: $main-purple;
-	// background: linear-gradient(
-	// 	0deg,
-	// 	rgba(49, 25, 81, 1) 0%,
-	// 	rgba(65, 34, 102, 1) 50%
-	// );
-
 	.notfound-container {
 		background: url('../../../assets/img/dots.svg') center/cover no-repeat;
 		width: 100%;
-		height: 80vh;
+		height: 85%;
 		.notfound-text-wrapper {
 			position: absolute;
 			left: 50%;
-			top: 35%;
-			transform: translate(-50%, -35%);
+			top: 40%;
+			transform: translate(-50%, -40%);
 			color: $white;
 			text-align: center;
 			.notfound-title {
@@ -35,11 +29,11 @@
 		}
 	}
 	.wave-container {
-	position: absolute;
-	bottom: 0;
-	width: 100%;
-	height: 25vh;
-	background: url('../../../assets/img/www.svg') center/cover no-repeat;
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		height: 15%;
+		background: url('../../../assets/img/wave.svg') center/cover no-repeat;
 	}
 }
 
