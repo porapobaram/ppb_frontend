@@ -1,42 +1,61 @@
-import React from "react";
-import BarPageComponent from "./BarPageComponent";
+import React, { Component } from 'react';
+import BarPageComponent from './BarPageComponent';
 import { connect } from 'react-redux';
-import { setBarDetails } from "../../../reduxStore/barPage/actions";
-import SliderComponent from "./Slider/SliderComponent";
+import SliderComponent from './Slider/SliderComponent';
+import { array, func, object, string } from 'prop-types';
+import { getRandomBar } from '../../../reduxStore/bar/actions';
 
-const BarPageContainer = ({ setBarDetails, barName , address, bonus, barInfo, phone, fbLink, openHours }) => {
-    return (
-        <div>
-            <SliderComponent/>
-            <BarPageComponent onSetBarDetails={setBarDetails}
-                              barName = {barName}
-                              address = {address}
-                              bonus = {bonus}
-                              barInfo = {barInfo}
-                              phone = {phone}
-                              fbLink = {fbLink}
-                              openHours = {openHours}
-            />
-        </div>
-    );
+const propTypes = {
+	randomBar: object,
+	barName: string,
+	address: string,
+	bonus: string,
+	barInfo: string,
+	phone: string,
+	fbLink: string,
+	getRandomBar: func,
+	onClickHandler: func,
+	openHours: array,
+	sliderPhotos: array,
+	formattedPhone: string,
 };
 
-function mapStateToProps(state) {
-    return {
-        //what data we want from redux store
-        barName: state.barPage.barName, // YA
-        address: state.barPage.address,
-        bonus: state.barPage.bonus,
-        barInfo: state.barPage.barInfo,
-        phone: state.barPage.phone,
-        fbLink: state.barPage.fbLink,
-        openHours: state.barPage.openHours, //Roma
-    }
+class BarPageContainer extends Component {
+	constructor(props) {
+		super(props);
+	}
+
+	componentDidMount() {
+		// this.props.getRandomBar();
+	}
+
+	render() {
+		const { getRandomBar, randomBar } = this.props;
+
+		return (
+			<div>
+				<SliderComponent />
+				<BarPageComponent getBarDetails={getRandomBar} randomBarObject={randomBar} />
+			</div>
+		);
+	}
 }
-
-const mapDispatchToProps = {
-    //what actions we want from redux store
-    setBarDetails
+BarPageContainer.propTypes = propTypes;
+const mapStateToProps = state => {
+	return {
+		randomBar: {
+			barName: state.randomBarReducer.randomBar.barName,
+			address: state.randomBarReducer.randomBar.address,
+			bonus: state.randomBarReducer.randomBar.bonus,
+			barInfo: state.randomBarReducer.randomBar.barInfo,
+			phone: state.randomBarReducer.randomBar.phone,
+			formattedPhone: state.randomBarReducer.randomBar.formattedPhone,
+			fbLink: state.randomBarReducer.randomBar.fbLink,
+			// openHours:
+			// sliderPhotos:
+		},
+	};
 };
+const mapDispatchToProps = { getRandomBar };
 
 export default connect(mapStateToProps, mapDispatchToProps)(BarPageContainer);

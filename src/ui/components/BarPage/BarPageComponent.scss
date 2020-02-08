@@ -1,3 +1,5 @@
+
+
 @mixin line {
   margin-top: 10px;
   content: "";
@@ -32,7 +34,7 @@
   width: 80%;
   margin: 0 auto;
   padding-bottom: 20px;
-  margin-left: 45px;
+  margin-left: 50px;
   h1 {
     color: #412366;
     font-size: 20px;
@@ -43,7 +45,7 @@
     color: #f77cbf;
     margin-left: 15px;
     @include Roboto-regular;
-    font-size: 13px;
+    font-size: 11px;
   }
 }
 //--------------------------bonus--------------------------------

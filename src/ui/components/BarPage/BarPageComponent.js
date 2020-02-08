@@ -1,70 +1,82 @@
-import React, { Fragment } from "react";
-import './BarPageComponent.scss'
+import React from 'react';
+import './BarPageComponent.scss';
+import { func, object, string, number, array } from 'prop-types';
 
-const BarPageComponent = ({ barName, address, bonus, barInfo, phone, fbLink, openHours, /* include all data (information) about barPage */
-    onSetBarDetails }) => (
+const propTypes = {
+	randomBarObject: object,
+	barName: string,
+	openHours: array,
+	sliderPhotos: array,
+	address: string,
+	bonus: string,
+	barInfo: string,
+	phone: number,
+	fbLink: string,
+	formattedPhone: string,
+	getBarDetails: func,
+	onClickHandler: func,
+};
 
-        <Fragment>
-            {/*<div className='slider'>*/}
-            {/*</div>*/}
+const BarPageComponent = ({ randomBarObject, getBarDetails }) => {
+	return (
+		<>
+			<div className="header">
+				<h1>{randomBarObject.barName}</h1>
+				<p>{randomBarObject.address}</p>
+			</div>
 
-            {/* <div className="wrapper">
-                <div className="wave"></div>
-            </div> */}
+			<div className="bonus-container">
+				<div className="gift" />
+				<div className="bonus">
+					<p className="blue-text">Твой бонус в баре</p>
+					<p className="gray-text">{randomBarObject.bonus}</p>
+				</div>
+			</div>
+			<div className="descripton-container">
+				<div className="main-descripton">
+					<div className="information" />
+					<p>{randomBarObject.barInfo}</p>
+				</div>
+				<div className="phone-number">
+					<div className="phone-img" />
+					<p className="phone">{randomBarObject.formattedPhone}</p>
+				</div>
+				<div className="name-container">
+					<div className="facebook" />
+					<p>{randomBarObject.fbLink}</p>
+				</div>
+				<div className="time-chedule">
+					<div className="bell" />
+					<p>{randomBarObject.openHours}</p>
+				</div>
+			</div>
+			<div className="buttons-container">
+				<button type="button" className="one-more">
+					<div className="arrow" />
+					<div
+						className="btn-block"
+						onClick={() => {
+							getBarDetails();
+						}}
+					>
+						<p className="top-text">Еще раз</p>
+						<p className="bottom-text">1 попытка из 3</p>
+					</div>
+				</button>
+				<button
+					type="button"
+					className="time"
+					onClick={() => {
+						getBarDetails();
+					}}
+				>
+					<p>Пора!</p>
+				</button>
+			</div>
+		</>
+	);
+};
 
-            <div className='header'>
-                <h1>{barName}</h1>
-                <p>{address}</p>
-            </div>
-
-            <div className='bonus-container'>
-                <div className='gift'></div>
-                <div className='bonus'>
-                    <p className='blue-text'>Твой бонус в баре</p>
-                    <p className='gray-text'>{bonus}</p>
-                </div>
-            </div>
-
-            <div className='descripton-container'>
-                <div className='main-descripton'>
-                <div className='information'></div>
-                    <p>{barInfo}</p>
-                </div>
-                <div className='phone-number'>
-                    <div className='phone-img'></div>
-                    <p className='phone'>{phone}</p>
-                </div>
-                <div className='name-container'>
-                    <div className='facebook'></div>
-                    <p>{fbLink}</p>
-                </div>
-                <div className='time-chedule'>
-                    <div className='bell'></div>
-                    <p>Открыто С 12:00 до 3:00</p>
-                </div>
-            </div>
-
-            {/*<div className='diagram-container'>*/}
-            {/*    </div>*/}
-
-            <div className='buttons-container'>
-                <button className='one-more'>
-                    <div className='arrow'></div>
-                    <div className='btn-block'>
-                        <p className='top-text'>Еще раз</p>
-                        <p className='bottom-text'>1 попытка из 3</p>
-                    </div>
-                </button>
-                <button className='time'
-                    onClick={() => {
-                        onSetBarDetails({ barName: 'test' });
-                    }}
-                >
-                    <p>Пора!</p>
-                </button>
-            </div>
-        </Fragment >
-
-    );
+BarPageComponent.propTypes = propTypes;
 
 export default BarPageComponent;
