@@ -7,7 +7,7 @@ import randomizeImg from './png/Randomize.png';
 import mapBarImg from './png/MapBar.png';
 
 const FooterComponent = () => (
-	<div className="footer">
+	<footer className="footer">
 		<NavLink to="/feed" className="navLink" activeClassName="is-active">
 			<img className="imgbar" src={newsBarImg} alt="newsbar" />
 			<span>Новости</span>
@@ -27,7 +27,7 @@ const FooterComponent = () => (
 			<img className="imgbar" src={mapBarImg} alt="mapbar" />
 			<span>Карта</span>
 		</NavLink>
-	</div>
+	</footer>
 );
 
 export default FooterComponent;
