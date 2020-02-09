@@ -3,11 +3,11 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
 import BarCrawlItem from './BarCrawlItem';
-import { test } from './data';
-import { object, func } from 'prop-types';
+import { object, func, array } from 'prop-types';
 import './BarCrawlPageContainer.scss';
 import leftArr from './assets/leftArrow.svg';
 import rightArr from './assets/rightArrow.svg';
+
 
 const propTypes = {
 	settings: object,
@@ -15,6 +15,7 @@ const propTypes = {
 	onNextArrow: func,
 	onPreviousArrow: func,
 	ref: func,
+	barCrawlPageData: array,
 };
 
 // eslint-disable-next-line react/prop-types
@@ -31,14 +32,17 @@ class BarCrawlPageComponent extends React.Component {
 		this.slider.slickPrev();
 	}
 	render() {
-		const { settings, onClickHandler, Slider, onNextArrow, onPreviousArrow, ref } = this.props;
+		const { settings, onClickHandler, Slider, ref, barCrawlPageData } = this.props;
 		return (
 			<div className="barcrawl-container-wrapper">
-				<Slider ref={c => (this.slider = c)} {...settings}>
-					{test.map(item => {
-						return <BarCrawlItem onClickHandler={onClickHandler} key={item.bcId} item={item} />;
-					})}
-				</Slider>
+				{barCrawlPageData && (
+					<Slider ref={c => (this.slider = c)} {...settings}>
+						{barCrawlPageData.map(item => {
+							console.log(item);
+							return <BarCrawlItem onClickHandler={onClickHandler} key={item.bcName} item={item} />;
+						})}
+					</Slider>
+				)}
 				<div style={{ textAlign: 'center' }}>
 					<div>
 						<img alt="Left" src={leftArr} onClick={this.previous} className=""/>
