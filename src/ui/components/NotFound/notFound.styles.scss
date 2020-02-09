@@ -4,13 +4,13 @@
 
 .notfound-wrapper {
     width: 100%;
-	height: calc(100vh - 157px);
-	position: relative;
+	height: calc(100% - 170px);
 	background: linear-gradient(
     0deg,
     rgba(49, 25, 81, 1) 0%,
     rgba(65, 34, 102, 1) 50%
   );
+	position: absolute;
 	.notfound-container {
 		background: url('../../../assets/img/dots.svg') center/cover no-repeat;
 		width: 100%;
