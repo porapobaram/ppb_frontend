@@ -1,0 +1,65 @@
+//@import 
+
+.barcrawl-page-item {
+	.barcrawl-image {
+		border-radius: 15px;
+        width: 100%;
+        height: auto;
+        margin-bottom: 15px;
+	}
+	.barcrawl-text {
+		padding: 0 20px;
+		.barcrawl-header {
+			display: flex;
+			justify-content: space-between;
+			margin-bottom: 10px;
+			.barcrawl-name {
+				font-family: 'Roboto-Bold';
+				font-size: 24px;
+				color: white;
+			}
+			.barcrawl-button {
+				height: 40px;
+				width: 100px;
+				border: 1px solid #0480fb;
+				background:#0480fb;
+				color: white;
+				border-radius: 17px;
+				font-size: 16px;
+				font-family: 'Roboto-Bold';
+			}
+		}
+		.barcrawl-time-price {
+			display: flex;
+			justify-content: space-between;
+			margin-bottom: 10px;
+			.barcrawl-time {
+				font-family: 'Roboto-Regular';
+				font-size: 14px;
+				color: #ffcc33;
+			}
+			.barcrawl-price {
+				align-items: center;
+				font-family: 'Roboto-Regular';
+				font-size: 14px;
+				color: #ffcc33;
+			}::after {
+				content: "";
+				display: block;
+				width: 10px;
+				height: 10px;
+				margin-left: 15px;
+				background-color: #381d5b;
+				float: right;
+			}
+		}
+		.barcrawl-description {
+			color: white;
+			font-family: 'Roboto-Regular';
+			font-size: 12px;
+			opacity: 0.6;
+			line-height: 140%;
+			letter-spacing: 0.6px;
+		}
+	}
+}
