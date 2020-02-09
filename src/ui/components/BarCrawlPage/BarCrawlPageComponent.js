@@ -16,23 +16,28 @@ const propTypes = {
 };
 
 // eslint-disable-next-line react/prop-types
-const BarCrawlPageComponent = ({ settings, onClickHandler, Slider, onNextArrow, onPreviousArrow, ref }) => (
-	<div className="barcrawl-container-wrapper">
-		<Slider ref={ref} {...settings}>
-			{test.map(item => {
-				return <BarCrawlItem onClickHandler={onClickHandler} key={item.bcId} item={item} />;
-			})}
-		</Slider>
-		<div style={{ textAlign: 'center' }}>
-			<button className="button" onClick={onPreviousArrow}>
-				Previous
-			</button>
-			<button className="button" onClick={onNextArrow}>
-				Next
-			</button>
-		</div>
-	</div>
-);
+class BarCrawlPageComponent extends React.Component {
+	render() {
+		const { settings, onClickHandler, Slider, onNextArrow, onPreviousArrow, ref } = this.props;
+		return (
+			<div className="barcrawl-container-wrapper">
+				<Slider ref={ref} {...settings}>
+					{test.map(item => {
+						return <BarCrawlItem onClickHandler={onClickHandler} key={item.bcId} item={item} />;
+					})}
+				</Slider>
+				<div style={{ textAlign: 'center' }}>
+					<button className="button" onClick={onPreviousArrow}>
+						Previous
+					</button>
+					<button className="button" onClick={onNextArrow}>
+						Next
+					</button>
+				</div>
+			</div>
+		);
+	}
+}
 
 BarCrawlPageComponent.propTypes = propTypes;
 
