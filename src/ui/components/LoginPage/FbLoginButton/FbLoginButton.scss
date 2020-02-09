@@ -1,47 +1,50 @@
+@import '../../../styles/colors.scss';
+@import '../../../styles/fonts.scss';
+
 .Login {
+  background: url(./wave1.svg) center / cover no-repeat;
+  height: 50vh;
+  width: 100%;
+  .button-container {
+	position: relative;
+	left: 50%;
+	top: 45%;
+    transform: translate(-50%, -45%);
     text-align: center;
-    
-    .arrow {
-      display: flex;
-      justify-content: center;
-      margin: auto;
+    .arrow {     
+      display: inline-block; 
       width: 15px;
       height: 15px;
-      border-right: 3px solid #fdd605;
-      border-bottom: 3px solid #fdd605;
+      border-right: 3px solid $main-yellow;
+      border-bottom: 3px solid $main-yellow;
       transform: rotate(-45deg);
-      position: absolute;
-      margin-top: 23px;
-      margin-left: 23px;
-      z-index: 1;
+      margin-left: -7px;
+      margin-top: 3px;
     }
-    .logo-facebook {
-    display: flex;
-    justify-content: center;
-    margin: auto;
-    position: absolute;
-    height: 25px;
-    width: 105px;
-    margin-left: 225px;
-    margin-top: 16px;
-    z-index: 1;
+    .facebook-text {
+      color: $white;
+      font-family: 'Roboto-Regular';
+      padding-left: 23px;
+      font-size: 27px;
     }
-  .facebook-login {
-    color: #fff;
-    text-align: justify;
-    font-family: 'Roboto', sans-serif;
-    background-color: transparent;
-    padding: 15px 0px 15px 30px;
-    text-decoration: none;
-    outline: none;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    border-bottom: solid #fdd605;
-    font-size: 27px;
-    width: 300px;
-    margin-bottom: 205px; 
-    z-index: 1;
-    position: relative;
-  }
+    .facebook-logo-text {
+      color: $white;
+      font-family: 'Klavika-Bold';
+      padding-left: 10px;
+      font-size: 25px;
+    }  
+		.facebook-login {
+			background-color: transparent;
+			text-decoration: none;
+			outline: none;
+			border-top: none;
+			border-left: none;
+			border-right: none;
+			border-bottom: solid $main-yellow;
+			width: 300px;
+			height: 30px;
+			bottom: 20px;
+			position: relative;
+		}
+	}
 }

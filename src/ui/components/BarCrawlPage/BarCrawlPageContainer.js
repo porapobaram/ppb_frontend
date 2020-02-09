@@ -1,8 +1,14 @@
 import React, { Component } from 'react';
 import BarCrawlPageComponent from './BarCrawlPageComponent';
 import { connect } from 'react-redux';
+import { func } from 'prop-types';
+import Slider from 'react-slick';
 
 import { getAllBarcrawls } from '../../../reduxStore/barCrawl/actions';
+
+const propTypes = {
+	getAllBarcrawls: func,
+};
 
 class BarCrawlPageContainer extends Component {
 	constructor(props) {
@@ -11,6 +17,7 @@ class BarCrawlPageContainer extends Component {
 	}
 
 	componentDidMount() {
+		// eslint-disable-next-line react/destructuring-assignment
 		this.props.getAllBarcrawls();
 	}
 
@@ -26,9 +33,11 @@ class BarCrawlPageContainer extends Component {
 			slidesToShow: 1,
 			slidesToScroll: 1,
 		};
-		return <BarCrawlPageComponent onClickHandler={this.onClickHandler} settings={settings} />;
+		return <BarCrawlPageComponent Slider={Slider} onClickHandler={this.onClickHandler} settings={settings} />;
 	}
 }
+
+BarCrawlPageContainer.propTypes = propTypes;
 
 const mapDispatchToProps = { getAllBarcrawls };
 
