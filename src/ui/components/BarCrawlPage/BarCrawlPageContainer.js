@@ -50,6 +50,7 @@ class BarCrawlPageContainer extends Component {
 				settings={settings}
 				onNextArrow={this.next}
 				onPreviousArrow={this.previous}
+				// eslint-disable-next-line no-return-assign
 				ref={slider => (this.slider = slider)}
 			/>
 		);
