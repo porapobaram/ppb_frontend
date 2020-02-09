@@ -6,6 +6,8 @@ import BarCrawlItem from './BarCrawlItem';
 import { test } from './data';
 import { object, func } from 'prop-types';
 import './BarCrawlPageContainer.scss';
+import leftArr from './assets/leftArrow.svg';
+import rightArr from './assets/rightArrow.svg';
 
 const propTypes = {
 	settings: object,
@@ -17,22 +19,34 @@ const propTypes = {
 
 // eslint-disable-next-line react/prop-types
 class BarCrawlPageComponent extends React.Component {
+	constructor(props) {
+		super(props);
+		this.next = this.next.bind(this);
+		this.previous = this.previous.bind(this);
+	}
+	next() {
+		this.slider.slickNext();
+	  }
+	previous() {
+		this.slider.slickPrev();
+	}
 	render() {
 		const { settings, onClickHandler, Slider, onNextArrow, onPreviousArrow, ref } = this.props;
 		return (
 			<div className="barcrawl-container-wrapper">
-				<Slider ref={ref} {...settings}>
+				<Slider ref={c => (this.slider = c)} {...settings}>
 					{test.map(item => {
 						return <BarCrawlItem onClickHandler={onClickHandler} key={item.bcId} item={item} />;
 					})}
 				</Slider>
 				<div style={{ textAlign: 'center' }}>
-					<button className="button" onClick={onPreviousArrow}>
-						Previous
-					</button>
-					<button className="button" onClick={onNextArrow}>
-						Next
-					</button>
+					<div>
+						<img alt="Left" src={leftArr} onClick={this.previous} className=""/>
+					</div>
+					<div>
+						<img alt="Right" src={rightArr} onClick={this.next} className=""/>
+					</div>
+					
 				</div>
 			</div>
 		);
