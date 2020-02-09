@@ -4,7 +4,7 @@ const initialState = {
 	allNews: [],
 };
 
-export default function barNewsReducer(state = initialState, action) {
+export function barNewsReducer(state = initialState, action) {
 	switch (action.type) {
 		case GET_ALL_NEWS:
 			return {

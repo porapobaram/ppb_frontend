@@ -4,7 +4,7 @@ const initialState = {
 	barCrawlPageData: [],
 };
 
-export default function barCrawlReducer(state = initialState, action) {
+export function barCrawlReducer(state = initialState, action) {
 	switch (action.type) {
 		case actionTypes.GET_BARCRAWLS:
 			return {
