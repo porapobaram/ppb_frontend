@@ -12,10 +12,10 @@ const propTypes = {
 };
 
 const BarCrawlItem = ({ item, onClickHandler }) => {
-	const { bcImg, bcName, bcTime, bcPrice, bcDescription } = item;
+	const { bcImage, bcName, bcTime, bcPrice, bcDescription } = item;
 	return (
 		<div>
-			<img alt="Bar" src={bcImg} />
+			<img alt="Bar" src={bcImage} />
 			<h2>{bcName}</h2>
 			<p>{bcTime}</p>
 			<p>{bcPrice}</p>
