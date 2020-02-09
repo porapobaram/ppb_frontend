@@ -3,6 +3,7 @@ import React from 'react';
 import BarCrawlItem from './BarCrawlItem';
 import { test } from './data';
 import { object, func } from 'prop-types';
+import './BarCrawlPageContainer.scss';
 
 const propTypes = {
 	settings: object,
