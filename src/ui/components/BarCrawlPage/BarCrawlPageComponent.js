@@ -3,11 +3,15 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
 import BarCrawlItem from './BarCrawlItem';
+<<<<<<< HEAD
 import { test } from './data';
 import { object, func } from 'prop-types';
 import './BarCrawlPageContainer.scss';
 import leftArr from './assets/leftArrow.svg';
 import rightArr from './assets/rightArrow.svg';
+=======
+import { object, func, array } from 'prop-types';
+>>>>>>> origin/bar-crawl-page-petruk
 
 const propTypes = {
 	settings: object,
