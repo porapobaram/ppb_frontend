@@ -1,31 +1,35 @@
 @import '../../styles/colors.scss';
+@import '../../styles/fonts.scss';
+@import '../../styles/reset.scss';
 
 .footer {
     background-color: $white;
-    height: 75px;
+    height: 80px;
     position: absolute;
     bottom: 0;
     display: flex;
     justify-content: space-around;
     width: 100%;
+    padding-top: 5px;
 
     .navLink {
         display: flex;
         flex-direction: column;
         text-decoration: none;
-        width: 75px;
-        color: #0580fb;
-        font-size: 17px;
+        width: 80px;
+        color: $main-blue;
+        font-size: 16px;
         text-align: center;
+        font-family: 'Roboto-Medium';
     }
     
     .is-active {
-        border-bottom: 5px solid #0580fb;
+        border-bottom: 5px solid $main-blue;
     }
     
     .imgbar {
         width: 45px;
         height: 40px;
-        margin: 0 auto;
+        margin: 6px auto;
     }
 }
