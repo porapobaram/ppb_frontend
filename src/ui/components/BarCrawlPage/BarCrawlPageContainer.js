@@ -14,6 +14,8 @@ class BarCrawlPageContainer extends Component {
 	constructor(props) {
 		super(props);
 		this.onClickHandler = this.onClickHandler.bind(this);
+		this.next = this.next.bind(this);
+		this.previous = this.previous.bind(this);
 	}
 
 	componentDidMount() {
@@ -25,15 +27,32 @@ class BarCrawlPageContainer extends Component {
 		console.log('test');
 	};
 
+	next() {
+		this.slider.slickNext();
+	}
+
+	previous() {
+		this.slider.slickPrev();
+	}
+
 	render() {
 		const settings = {
-			dots: true,
+			dots: false,
 			infinite: true,
 			speed: 500,
 			slidesToShow: 1,
 			slidesToScroll: 1,
+			arrows: false,
 		};
-		return <BarCrawlPageComponent Slider={Slider} onClickHandler={this.onClickHandler} settings={settings} />;
+		return (
+			<BarCrawlPageComponent
+				Slider={Slider}
+				onClickHandler={this.onClickHandler}
+				settings={settings}
+				slickNext={this.next}
+				slickPrev={this.previous}
+			/>
+		);
 	}
 }
 
