@@ -13,7 +13,6 @@ const propTypes = {
 class BarCrawlPageContainer extends Component {
 	constructor(props) {
 		super(props);
-		this.onClickHandler = this.onClickHandler.bind(this);
 	}
 
 	componentDidMount() {
