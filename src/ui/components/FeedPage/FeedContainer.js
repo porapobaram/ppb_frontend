@@ -2,10 +2,11 @@ import React, { Component } from 'react';
 import FeedComponent from './FeedComponent';
 import { getNewsFeed } from '../../../reduxStore/news/actions';
 import { connect } from 'react-redux';
-import { func } from 'prop-types';
+import { func, array } from 'prop-types';
 
 const propTypes = {
 	getNewsFeed: func,
+	allNews: array,
 };
 
 class FeedContainer extends Component {
@@ -20,14 +21,19 @@ class FeedContainer extends Component {
 	}
 
 	render() {
-		return <FeedComponent />;
+		return <FeedComponent allNews={this.props.allNews} />;
 	}
 }
 
 FeedContainer.propTypes = propTypes;
 
+const mapStateToProps = ({ barNewsReducer }) => {
+	const { allNews } = barNewsReducer;
+	return { allNews };
+};
+
 const mapDispatchToProps = {
 	getNewsFeed,
 };
 
-export default connect(null, mapDispatchToProps)(FeedContainer);
+export default connect(mapStateToProps, mapDispatchToProps)(FeedContainer);

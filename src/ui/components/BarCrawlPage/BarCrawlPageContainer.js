@@ -21,10 +21,6 @@ class BarCrawlPageContainer extends Component {
 		this.props.getAllBarcrawls();
 	}
 
-	onClickHandler = () => {
-		console.log('test');
-	};
-
 	render() {
 		const settings = {
 			dots: true,
