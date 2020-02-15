@@ -1,8 +1,9 @@
 import React, * as react from 'react';
 import RandomizeScreenComponent from './RandomizeScreenComponent';
-import { getRandomBar } from '../../../reduxStore/bar/actions';
+import { getRandomBar, setBarEffort, setBarEffortCookies } from '../../../reduxStore/bar/actions';
 import { connect } from 'react-redux';
 import { push } from 'connected-react-router';
+import configureStore from "../../../reduxStore/store";
 
 class RandomizeScreenContainer extends react.Component {
 	constructor(props) {
@@ -12,12 +13,15 @@ class RandomizeScreenContainer extends react.Component {
 
 	// eslint-disable-next-line react/sort-comp
 	onClickHandler = () => {
-		// getRandomBar();
-		this.props.push('/testing');
+		this.props.push('/barPage');
 	};
 
 	componentDidMount() {
 		this.props.getRandomBar();
+	}
+	componentWillUnmount() {
+		const { effort } = this.props;
+		 this.props.setBarEffortCookies( effort );
 	}
 
 	render() {
@@ -25,9 +29,16 @@ class RandomizeScreenContainer extends react.Component {
 	}
 }
 
+const mapStateToProps = state => {
+	return {
+		effort: state.randomBarReducer.effort,
+	};
+};
 const mapDispatchToProps = {
 	getRandomBar,
+	setBarEffort,
+	setBarEffortCookies,
 	push,
 };
 
-export default connect(null, mapDispatchToProps)(RandomizeScreenContainer);
+export default connect(mapStateToProps, mapDispatchToProps)(RandomizeScreenContainer);

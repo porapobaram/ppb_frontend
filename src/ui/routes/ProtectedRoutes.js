@@ -6,11 +6,13 @@ import BarCrawlPage from '../components/BarCrawlPage';
 import FeedPage from '../components/FeedPage';
 import Header from '../common/Header';
 import RandomizeScreenContainer from '../components/RandomizeScreen/RandomizeScreenContainer';
+import BarPage from '../components/BarPage';
+import MapPage from '../components/Maps';
 
 const ProtectedRoutes = () => (
 	<div>
 		{/* header placement */}
-		<Header />
+		{window.location.pathname !== '/barPage' ? <Header /> : null}
 		{/* header placement end */}
 		{/* https://stackoverflow.com/questions/51796344/how-to-skip-header-and-footer-for-certain-routes-in-reactjs */}
 		<Switch>
@@ -20,6 +22,9 @@ const ProtectedRoutes = () => (
 			<Route exact path="/randomizer">
 				<RandomizeScreenContainer />
 			</Route>
+			<Route exact path="/barPage">
+				<BarPage />
+			</Route>
 			<Route exact path="/barcrawl">
 				<BarCrawlPage />
 			</Route>
@@ -28,12 +33,11 @@ const ProtectedRoutes = () => (
 				<FeedPage />
 			</Route>
 			<Route exact path="/map">
-				{/* map page */}
-				<p>map</p>
+				<MapPage />
 			</Route>
 			<Route component={NotFound} />
 		</Switch>
-		<Footer />
+		{window.location.pathname !== '/barPage' ? <Footer /> : null}
 	</div>
 );
 
