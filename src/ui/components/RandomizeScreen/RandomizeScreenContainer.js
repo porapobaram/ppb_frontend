@@ -9,7 +9,6 @@ class RandomizeScreenContainer extends react.Component {
 		this.onClickHandler = this.onClickHandler.bind(this);
 	}
 
-	// eslint-disable-next-line react/sort-comp
 	onClickHandler = () => {
 		getRandomBar();
 	};
