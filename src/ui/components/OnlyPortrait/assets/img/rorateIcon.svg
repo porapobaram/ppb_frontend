@@ -1,0 +1,15 @@
+<svg width="429.5" height="339.02" xmlns="http://www.w3.org/2000/svg">
+ <g>
+  <rect fill="none" id="canvas_background" height="402" width="582" y="-1" x="-1"/>
+ </g>
+ <g>
+  <g id="svg_1" opacity="0.5">
+   <rect id="svg_2" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="10px" transform="rotate(90 654.2000122070312,-417.6900024414062) " rx="32.39" height="329" width="182" y="-187.990002" x="1198.410012"/>
+   <path id="svg_3" fill="#fff" d="m424.500009,159.320007l-15.64,5.44c-4.35,1.51 -7.36,6.5 -7.36,12.2l0,80.73c0,5.69 3,10.68 7.36,12.19l15.64,5.44l0,-116z"/>
+  </g>
+  <path id="svg_4" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="5px" d="m232.230009,12.120007a96.8,96.8 0 0 1 86.84,87.95"/>
+  <polygon id="svg_5" fill="#fff" points="235.62 24.93 214.29 12.02 236.13 0 235.62 24.93"/>
+  <rect id="svg_6" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="10px" transform="rotate(-180 567.2100219726562,515.719970703125) " rx="32.39" height="329" width="182" y="697.419971" x="947.420022"/>
+  <path id="svg_7" fill="#fff" d="m154.250009,5.020007l-5.46,15.64c-1.51,4.35 -6.5,7.36 -12.2,7.36l-80.71,0c-5.69,0 -10.68,-3 -12.19,-7.36l-5.44,-15.64l116,0z"/>
+ </g>
+</svg>
