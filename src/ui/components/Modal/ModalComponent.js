@@ -6,7 +6,7 @@ const ModalComponent = () => {
         <div className="modal_wrapper">
             <div className="modal_container">
                 <h2>ALERT</h2>
-                <p>Some info</p>
+                <p>You drunk</p>
             </div>
         </div>
     )

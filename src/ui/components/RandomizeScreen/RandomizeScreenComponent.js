@@ -10,7 +10,7 @@ const RandomizeScreenComponent = ({ onClickHandler }) => {
 				</button>
 			</div>
 		</div>
-	);
+	)
 };
 
 export default RandomizeScreenComponent;
