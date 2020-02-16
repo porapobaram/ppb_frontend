@@ -9,12 +9,14 @@ export function modalReducer(state = initialState, action) {
 		case OPEN_MODAL:
 			return {
 				...state,
-				modalType: action.payload,
+				modalType: action.payload.modalType,
+				modalProps: action.payload.modalProps,
 			};
 		case CLOSE_MODAL:
 			return {
 				...state,
-				modalType: action.payload,
+				modalType: '',
+				modalProps: '',
 			};
 		default:
 			return state;

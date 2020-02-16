@@ -7,7 +7,6 @@ import { PublicRoutes } from './ui/routes/PublicRoutes';
 import NotFound from './ui/components/NotFound';
 import configureStore, { history } from './reduxStore/store';
 
-// eslint-disable-next-line react/prefer-stateless-function
 class App extends react.Component {
 	render() {
 		const store = configureStore({});

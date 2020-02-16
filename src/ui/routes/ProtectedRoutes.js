@@ -5,10 +5,12 @@ import NotFound from '../components/NotFound';
 import BarCrawlPage from '../components/BarCrawlPage';
 import FeedPage from '../components/FeedPage';
 import Header from '../common/Header';
-import ModalContainer from "../components/Modal";
+import ModalRoot from '../components/ModalRoot';
+import RandomizeScreenContainer from '../components/RandomizeScreen/RandomizeScreenContainer';
 
 const ProtectedRoutes = () => (
 	<div>
+		<ModalRoot />
 		{/* header placement */}
 		<Header />
 		{/* header placement end */}
@@ -18,8 +20,7 @@ const ProtectedRoutes = () => (
 				<Redirect to="/randomizer" />
 			</Route>
 			<Route exact path="/randomizer">
-				{/*<RandomizeScreenContainer />*/}
-					<ModalContainer />
+				<RandomizeScreenContainer />
 			</Route>
 			<Route exact path="/barcrawl">
 				<BarCrawlPage />
