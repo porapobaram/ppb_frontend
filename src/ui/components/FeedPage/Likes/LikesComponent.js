@@ -11,7 +11,7 @@ const propTypes = {
 const LikesComponent = ({ likes, onLikeClick, index }) => {
 	return (
 		<div className="wrapper-like-toggle">
-			<img className="feed-back-toggle" onClick={() => onLikeClick(index, likes + 1)} src={likeImg} alt="" />
+			<img className="feed-back-toggle" onClick={() => onLikeClick(index, likes)} src={likeImg} alt="" />
 			<p>{likes}</p>
 		</div>
 	);

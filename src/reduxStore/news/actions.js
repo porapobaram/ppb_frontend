@@ -14,4 +14,6 @@ export const getNewsFeed = () => async dispatch => {
 
 export const updateLikeCounter = (index, data) => dispatch => {
 	dispatch({ type: actionTypes.UPDATE_LIKES_COUNTER_SUCCESS, payload: { index, data } });
+	// TODO: make backend request to update likes on backend
+	// TODO:rename action according to new functionaliti
 };
