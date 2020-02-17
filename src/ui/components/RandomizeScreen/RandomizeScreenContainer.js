@@ -10,10 +10,8 @@ class RandomizeScreenContainer extends react.Component {
 		this.onClickHandler = this.onClickHandler.bind(this);
 	}
 
-	// eslint-disable-next-line react/sort-comp
 	onClickHandler = () => {
-		// getRandomBar();
-		this.props.push('/testing');
+		this.props.push('/barPage');
 	};
 
 	componentDidMount() {
@@ -21,13 +19,21 @@ class RandomizeScreenContainer extends react.Component {
 	}
 
 	render() {
-		return <RandomizeScreenComponent onClickHandler={this.onClickHandler} />;
+		return (
+			<RandomizeScreenComponent onClickHandler={this.onClickHandler} buttonDisabled={this.props.buttonDisabled} />
+		);
 	}
 }
 
+const mapStateToProps = state => {
+	return {
+		effort: state.randomBarReducer.effort,
+		buttonDisabled: state.randomBarReducer.buttonDisabled,
+	};
+};
 const mapDispatchToProps = {
 	getRandomBar,
 	push,
 };
 
-export default connect(null, mapDispatchToProps)(RandomizeScreenContainer);
+export default connect(mapStateToProps, mapDispatchToProps)(RandomizeScreenContainer);
