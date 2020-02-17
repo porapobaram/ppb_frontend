@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import { node } from 'prop-types';
 import OnlyMobileContainer from '../../ui/components/OnlyMobile';
 
 const propTypes = {
-	children: PropTypes.node,
+	children: node,
 };
 
 class WindowSizeHandler extends Component {
