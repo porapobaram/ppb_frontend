@@ -11,28 +11,9 @@ const propTypes = {
 };
 
 class BarCrawlPageContainer extends Component {
-	constructor(props) {
-		super(props);
-		this.onClickHandler = this.onClickHandler.bind(this);
-		this.next = this.next.bind(this);
-		this.previous = this.previous.bind(this);
-	}
-
 	componentDidMount() {
 		// eslint-disable-next-line react/destructuring-assignment
 		this.props.getAllBarcrawls();
-	}
-
-	onClickHandler = () => {
-		console.log('test');
-	};
-
-	next() {
-		this.slider.slickNext();
-	}
-
-	previous() {
-		this.slider.slickPrev();
 	}
 
 	render() {

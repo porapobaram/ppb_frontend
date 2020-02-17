@@ -3,29 +3,31 @@ import React from 'react';
 import BarCrawlItem from './BarCrawlItem';
 import { test } from './data';
 import { object, func } from 'prop-types';
-import './BarCrawlPageContainer.scss';
+import './BarCrawlPageComponent.scss';
 
 const propTypes = {
 	settings: object,
 	onClickHandler: func,
 	slickNext: func,
 	slickPrev: func,
+	Slider: func,
 };
 
-// eslint-disable-next-line react/prop-types
-const BarCrawlPageComponent = ({ settings, onClickHandler, Slider }) => (
-	<div className="barcrawl-container-wrapper">
-		<Slider ref={c => (this.slider = c)} {...settings}>
-			{test.map(item => {
-				return <BarCrawlItem onClickHandler={onClickHandler} key={item.bcId} item={item} />;
-			})}
-		</Slider>
-		<button className="button">
-            Previous
-        </button>
-        <button className="button">
-            Next
-        </button>
+const BarCrawlPageComponent = ({ settings, Slider }) => (
+	<div className="barcrawl-container">
+		<div className="barcrawl-wrapper">
+			<Slider {...settings}>
+				{test.map(item => {
+					return <BarCrawlItem key={item.bcId} item={item} />;
+				})}
+			</Slider>
+			<button type="button" className="button">
+				Previous
+			</button>
+			<button type="button" className="button">
+				Next
+			</button>
+		</div>
 	</div>
 );
 
