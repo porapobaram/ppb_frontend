@@ -15,19 +15,17 @@ class App extends Component {
 	render() {
 		const store = configureStore({});
 		return (
-			<div>
-				<Provider store={store}>
-					<ConnectedRouter history={history}>
-						<WindowSizeHandler>
-							<Switch>
-								<Route exact path="/login" component={PublicRoutes} />
-								<Route path="/" component={ProtectedRoutes} />
-								<Route component={NotFound} />
-							</Switch>
-						</WindowSizeHandler>
-					</ConnectedRouter>
-				</Provider>
-			</div>
+			<Provider store={store}>
+				<ConnectedRouter history={history}>
+					<WindowSizeHandler>
+						<Switch>
+							<Route exact path="/login" component={PublicRoutes} />
+							<Route path="/" component={ProtectedRoutes} />
+							<Route component={NotFound} />
+						</Switch>
+					</WindowSizeHandler>
+				</ConnectedRouter>
+			</Provider>
 		);
 	}
 }

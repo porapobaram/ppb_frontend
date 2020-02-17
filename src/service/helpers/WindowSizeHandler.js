@@ -1,23 +1,28 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import OnlyMobileContainer from '../../ui/components/OnlyMobile';
-import OnlyPortraitContainer from '../../ui/components/OnlyPortrait';
+
+const propTypes = {
+	children: PropTypes.node,
+};
 
 class WindowSizeHandler extends Component {
 	constructor(props) {
 		super(props);
-		this.state = { width: window.innerWidth, height: window.innerHeight };
+		this.state = { width: window.innerWidth };
 	}
 
 	render() {
-		console.log(window);
-		if (this.state.width >= 768 && this.state.width < this.state.height) {
+		const { width } = this.state;
+		const { children } = this.props;
+
+		if (width >= 768) {
 			return <OnlyMobileContainer />;
 		}
-		if (false) {
-			return <OnlyPortraitContainer />;
-		}
-		return <div>{this.props.children}</div>;
+		return <div>{children}</div>;
 	}
 }
+
+WindowSizeHandler.propTypes = propTypes;
 
 export default WindowSizeHandler;
