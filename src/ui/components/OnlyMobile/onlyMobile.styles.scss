@@ -18,13 +18,14 @@
 		top: 45%;
 		transform: translate(-50%, -45%);
 		.onlyMobile-img {
-			width: 100px;
+			width: 300px;
 		}
 		.onlyMobile-text {
 			color: $white;
 			font-family: 'Roboto-Regular', sans-serif;
-			margin-top: 15px;
-			line-height: 20px;
+			margin-top: 25px;
+			line-height: 35px;
+			font-size: 30px;
 		}
 	}
 };
