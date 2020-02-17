@@ -1,0 +1,31 @@
+@import "../../styles/colors.scss";
+@import '../../styles/fonts.scss';
+@import '../../styles/reset.scss';
+
+.onlyMobile-wrapper {
+	background: linear-gradient(
+		0deg,
+		rgba(49, 25, 81, 1) 0%,
+		rgba(65, 34, 102, 1) 50%
+	);	
+	width: 100%;
+	min-height: 100%;
+	position: absolute;
+	.onlyMobile-container {
+		text-align: center;
+		position: absolute;
+		left: 50%;
+		top: 45%;
+		transform: translate(-50%, -45%);
+		.onlyMobile-img {
+			width: 300px;
+		}
+		.onlyMobile-text {
+			color: $white;
+			font-family: 'Roboto-Regular', sans-serif;
+			margin-top: 25px;
+			line-height: 35px;
+			font-size: 30px;
+		}
+	}
+};

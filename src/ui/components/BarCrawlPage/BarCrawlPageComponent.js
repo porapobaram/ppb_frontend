@@ -1,3 +1,6 @@
+/* eslint-disable react/no-this-in-sfc */
+/* eslint-disable no-return-assign */
+/* eslint-disable react/button-has-type */
 /* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
 import BarCrawlItem from './BarCrawlItem';
@@ -20,12 +23,8 @@ const BarCrawlPageComponent = ({ settings, onClickHandler, Slider }) => (
 				return <BarCrawlItem onClickHandler={onClickHandler} key={item.bcId} item={item} />;
 			})}
 		</Slider>
-		<button className="button">
-            Previous
-        </button>
-        <button className="button">
-            Next
-        </button>
+		<button className="button">Previous</button>
+		<button className="button">Next</button>
 	</div>
 );
 

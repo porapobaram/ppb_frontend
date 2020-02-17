@@ -1,0 +1,11 @@
+<svg width="294.07" height="351.5" xmlns="http://www.w3.org/2000/svg">
+ <g>
+  <rect fill="none" id="canvas_background" height="402" width="582" y="-1" x="-1"/>
+ </g>
+ <g>
+  <path id="svg_1" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="10px" d="m143.500006,334.000002l-106.1,0a32.39,32.39 0 0 1 -32.4,-32.42l0,-264.19a32.39,32.39 0 0 1 32.4,-32.39l117.21,0a32.39,32.39 0 0 1 32.39,32.39l0,55.12"/>
+  <path id="svg_2" fill="#fff" d="m154.250006,5.000002l-5.44,15.63c-1.51,4.36 -6.5,7.37 -12.19,7.37l-80.73,0c-5.7,0 -10.69,-3 -12.2,-7.37l-5.44,-15.63l116,0z"/>
+  <rect id="svg_3" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="7px" transform="rotate(-180 855.719970703125,622.4199829101562) " rx="23.9" height="241" width="133.32" y="896.839983" x="1420.869971"/>
+  <circle id="svg_4" fill="#fff" r="7.11" cy="326.88" cx="224.07"/>
+ </g>
+</svg>
