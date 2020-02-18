@@ -17,7 +17,7 @@ const initialState = {
 		],
 		sliderPhotos: [],
 	},
-	effort: null,
+	effort: 1,
 	buttonDisabled: false,
 };
 

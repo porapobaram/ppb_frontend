@@ -7,7 +7,6 @@ import FeedPage from '../components/FeedPage';
 import Header from '../common/Header';
 import RandomizeScreenContainer from '../components/RandomizeScreen/RandomizeScreenContainer';
 import BarPage from '../components/BarPage';
-import MapPage from '../components/Maps';
 
 const ProtectedRoutes = () => (
 	<div>
@@ -33,7 +32,7 @@ const ProtectedRoutes = () => (
 				<FeedPage />
 			</Route>
 			<Route exact path="/map">
-				<MapPage />
+				<p>maps</p>
 			</Route>
 			<Route component={NotFound} />
 		</Switch>

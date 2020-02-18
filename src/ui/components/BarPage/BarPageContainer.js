@@ -3,10 +3,12 @@ import React, { Component } from 'react';
 import BarPageComponent from './BarPageComponent';
 import { connect } from 'react-redux';
 import { array, func, object, string, number } from 'prop-types';
-import { getRandomBar, setBarEffort } from '../../../reduxStore/bar/actions';
+import { setBarEffort } from '../../../reduxStore/bar/actions';
 import Slider from 'react-slick';
 import { push } from 'connected-react-router';
+import cookie from 'react-cookies';
 import { MAX_EFFORT } from '../../../config';
+import { getDateExpires } from '../../../service/helpers/cookieHelpers';
 
 const propTypes = {
 	randomBar: object,
@@ -21,7 +23,6 @@ const propTypes = {
 	openHours: array,
 	sliderPhotos: array,
 	push: func,
-	getRandomBar: func,
 	setBarEffort: func,
 	onClickHandler: func,
 	onClickHandlerMaps: func,
@@ -35,18 +36,25 @@ class BarPageContainer extends Component {
 	}
 
 	componentDidMount() {
-		this.props.getRandomBar();
+		const { effort, push } = this.props;
+		const savedEfforts = Number(cookie.load('effort'));
+		console.log({ savedEfforts });
+		if (savedEfforts > MAX_EFFORT) {
+			push('/randomizer');
+		}
+	}
+
+	componentWillUnmount() {
+		const { effort } = this.props;
+		const updatedEffort = Number(effort + 1);
+		this.props.setBarEffort(updatedEffort);
+		cookie.save('effort', updatedEffort, { path: '/' }, { expires: getDateExpires(1) });
+		cookie.save('lastBarVisited', JSON.stringify(this.props.randomBar), { path: '/barPage' });
 	}
 
 	onClickHandler = () => {
-		const { effort, push } = this.props;
-		this.props.setBarEffort(effort);
-		if (effort === MAX_EFFORT) {
-			push('/randomizer');
-		} else {
-			this.props.getRandomBar();
-		}
-
+		const { push } = this.props;
+		push('/randomizer');
 	};
 
 	onClickHandlerMaps = () => {
@@ -89,7 +97,6 @@ const mapStateToProps = state => {
 	};
 };
 const mapDispatchToProps = {
-	getRandomBar,
 	setBarEffort,
 	push,
 };
