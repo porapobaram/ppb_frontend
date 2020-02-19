@@ -28,7 +28,6 @@ class BarCrawlPageContainer extends Component {
 		return (
 			<BarCrawlPageComponent
 				Slider={Slider}
-				onClickHandler={this.onClickHandler}
 				settings={settings}
 				slickNext={this.next}
 				slickPrev={this.previous}

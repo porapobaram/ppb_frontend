@@ -1,20 +1,22 @@
-/* eslint-disable react/prop-types */
-/* eslint-disable react/button-has-type */
 import React from 'react';
 import './RandomizeScreenComponent.scss';
 
-const RandomizeScreenComponent = ({ onClickHandler }) => {
+import { func, bool } from 'prop-types';
+
+const propTypes = {
+	onClickHandler: func,
+	buttonDisabled: bool,
+};
+const RandomizeScreenComponent = ({ onClickHandler, buttonDisabled }) => {
 	return (
-		<>
-			<div className="button_wrapper">
-				<div className="button_container">
-					<button className="button" onClick={onClickHandler}>
-						Пора!
-					</button>
-				</div>
+		<div className="button_wrapper">
+			<div className="button_container">
+				<button type="button" disabled={buttonDisabled} className="button" onClick={onClickHandler}>
+					Пора!
+				</button>
 			</div>
-		</>
+		</div>
 	);
 };
-
+RandomizeScreenComponent.propTypes = propTypes;
 export default RandomizeScreenComponent;

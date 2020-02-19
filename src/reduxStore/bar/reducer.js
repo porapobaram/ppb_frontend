@@ -1,4 +1,4 @@
-import { GET_RANDOM_BAR } from './actionTypes';
+import { GET_RANDOM_BAR, SET_BAR_EFFORT } from './actionTypes';
 
 const initialState = {
 	randomBar: {
@@ -9,9 +9,16 @@ const initialState = {
 		phone: '',
 		formattedPhone: '',
 		fbLink: '',
-		openHours: [],
+		openHours: [
+			{
+				days: '',
+				open: [{}],
+			},
+		],
 		sliderPhotos: [],
 	},
+	effort: 1,
+	buttonDisabled: false,
 };
 
 export function randomBarReducer(state = initialState, action) {
@@ -20,6 +27,12 @@ export function randomBarReducer(state = initialState, action) {
 			return {
 				...state,
 				randomBar: action.data,
+			};
+		case SET_BAR_EFFORT:
+			return {
+				...state,
+				effort: action.payload,
+				buttonDisabled: action.disabledButton,
 			};
 		default:
 			return state;
