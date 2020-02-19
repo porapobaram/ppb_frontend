@@ -1,5 +1,5 @@
 import React, * as react from 'react';
-import { connect, Provider } from 'react-redux';
+import { connect } from 'react-redux';
 import { ConnectedRouter } from 'connected-react-router';
 import { Switch, Route } from 'react-router-dom';
 import { ProtectedRoutes } from './ui/routes/ProtectedRoutes';
