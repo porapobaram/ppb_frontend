@@ -6,6 +6,7 @@
   right: 0;
   background: rgba(110, 110, 110, 0.6);
   z-index: 999;
+  transition: 5s;
   .toBarModal-container{
 	position: absolute;
 	left: 50%;
@@ -25,11 +26,15 @@
 	  background: #0480fb;
 	  border-top-left-radius: 10px;
 	  border-top-right-radius: 10px;
+	  line-height: normal;
+	  display: table-cell;
+	  vertical-align: middle;
 	}
 	.toBarModal-icon{
-	  width: 95%;
+	  width: 90%;
 	  height: calc(100% - 40px);
-	  background: url("toBarModalPic.png") center/contain no-repeat;
+	  margin-top: 10px;
+	  background: url("toBarModalIcon.png") center/contain no-repeat;
 	}
   }
 }
