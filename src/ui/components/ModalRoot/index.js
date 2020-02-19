@@ -2,11 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import ToBarModalComponent from '../Modals/ToBarModal';
 
-export class ModalRoot extends Component {
-	constructor(props) {
-		super(props);
-	}
-
+class ModalRoot extends Component {
 	render() {
 		const MODAL_COMPONENTS = {
 			TEST_MODAL: ToBarModalComponent,
@@ -15,7 +11,6 @@ export class ModalRoot extends Component {
 		if (!this.props.modalType) {
 			return null;
 		}
-
 		const SpecificModal = MODAL_COMPONENTS[this.props.modalType];
 		return <SpecificModal {...this.props.modalProps} />;
 	}
