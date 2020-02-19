@@ -1,17 +1,16 @@
 import React from 'react';
 import { Marker, InfoWindow } from '@react-google-maps/api';
-import { number, string } from 'prop-types';
+import { object, string } from 'prop-types';
 
 const propTypes = {
 	info: string,
-	// lat: number,
-	// lng: number,
+	position: object,
 };
 
-const CustomMarker = ({ info, lat, lng }) => {
+const CustomMarker = ({ info, position }) => {
 	return (
-		<Marker position={{ lat, lng }}>
-			<InfoWindow position={{ lat, lng }}>
+		<Marker position={position}>
+			<InfoWindow position={position}>
 				<h4>{info}</h4>
 			</InfoWindow>
 		</Marker>
