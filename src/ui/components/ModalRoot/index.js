@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import ToBarModalComponent from '../Modals/ToBarModal';
 
 export class ModalRoot extends Component {
 	constructor(props) {
@@ -8,7 +9,7 @@ export class ModalRoot extends Component {
 
 	render() {
 		const MODAL_COMPONENTS = {
-			TEST_MODAL: <p>test</p>,
+			TEST_MODAL: ToBarModalComponent,
 			/* other modals */
 		};
 		if (!this.props.modalType) {
