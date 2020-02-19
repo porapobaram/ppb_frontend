@@ -1,0 +1,35 @@
+.toBarModal-wrapper{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(110, 110, 110, 0.6);
+  z-index: 999;
+  .toBarModal-container{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: 70%;
+	height: 45%;
+	background: #381d5b;
+	transition: all 4s ease;
+	border-radius: 10%;
+	.toBarModal-text{
+	  text-align: center;
+	  color: white;
+	  font-family: 'Roboto-Regular', sans-serif;
+	  height: 50px;
+	  padding: 5px;
+	  background: #0480fb;
+	  border-top-left-radius: 10px;
+	  border-top-right-radius: 10px;
+	}
+	.toBarModal-icon{
+	  width: 95%;
+	  height: calc(100% - 40px);
+	  background: url("toBarModalPic.png") center/contain no-repeat;
+	}
+  }
+}

@@ -1,17 +1,14 @@
 import React, { Component } from 'react';
-import './ToBarModalComponent.scss'
+import './ToBarModalComponent.scss';
 
+// eslint-disable-next-line react/prefer-stateless-function
 class ToBarModalComponent extends Component {
-	constructor(props) {
-		super(props);
-	}
-
 	render() {
 		return (
 			<div className="toBarModal-wrapper">
 				<div className="toBarModal-container">
-					<div className="toBarModal-text">test</div>
-					<div className="toBarModal-icon">testing picture</div>
+					<div className="toBarModal-text">Прокладываем маршрут к бару на карте</div>
+					<div className="toBarModal-icon" />
 				</div>
 			</div>
 		);
