@@ -11,10 +11,6 @@ const propTypes = {
 };
 
 class BarCrawlPageContainer extends Component {
-	constructor(props) {
-		super(props);
-	}
-
 	componentDidMount() {
 		// eslint-disable-next-line react/destructuring-assignment
 		this.props.getAllBarcrawls();
@@ -22,13 +18,22 @@ class BarCrawlPageContainer extends Component {
 
 	render() {
 		const settings = {
-			dots: true,
+			dots: false,
 			infinite: true,
 			speed: 500,
 			slidesToShow: 1,
 			slidesToScroll: 1,
+			arrows: false,
 		};
-		return <BarCrawlPageComponent Slider={Slider} onClickHandler={this.onClickHandler} settings={settings} />;
+		return (
+			<BarCrawlPageComponent
+				Slider={Slider}
+				onClickHandler={this.onClickHandler}
+				settings={settings}
+				slickNext={this.next}
+				slickPrev={this.previous}
+			/>
+		);
 	}
 }
 
