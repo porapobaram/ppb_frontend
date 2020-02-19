@@ -1,48 +1,65 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { GoogleMap, LoadScript } from '@react-google-maps/api';
 import './mapPageComponent.scss';
 import CustomMarker from './CustomMarker';
 import { GOOGLE_API_KEY } from '../../../config';
 
-function MapPageComponent() {
-	const [position, setPosition] = useState({});
-	const [isLoading, setIsLoading] = useState(false);
+class MapPageComponent extends React.Component {
+	constructor(props) {
+		super(props);
+		this.state = {
+			isLoading: false,
+			position: {},
+		};
+	}
 
-	useEffect(() => {
-		setIsLoading(true);
-		navigator.geolocation.getCurrentPosition(currentPos => {
-			setPosition({
-				lat: currentPos.coords.latitude,
-				lng: currentPos.coords.longitude,
-			});
-		});
-	}, []);
+	componentDidMount() {
+		this.setState(
+			{
+				isLoading: true,
+			},
+			() => {
+				console.log(this.state);
+				navigator.geolocation.getCurrentPosition(currentPos => {
+					this.setState(
+						{
+							position: {
+								lat: currentPos.coords.latitude,
+								lng: currentPos.coords.longitude,
+							},
+						},
+						() => {
+							this.setState({
+								isLoading: false,
+							});
+						}
+					);
+				});
+			}
+		);
+	}
 
-	useEffect(() => {
-		setIsLoading(false);
-		console.log(position);
-	}, [position]);
-
-	return (
-		<div>
-
-			<LoadScript id="script-loader" googleMapsApiKey={GOOGLE_API_KEY}>
-				{!isLoading ? (
-					<GoogleMap
-						id="example-app"
-						mapContainerStyle={{
-							height: '800px',
-							width: '375px',
-						}}
-						zoom={8}
-						center={position}
-					>
-						<CustomMarker position={position} info="my location" />
-					</GoogleMap>
-				) : null}
-			</LoadScript>
-		</div>
-	);
+	render() {
+		return (
+			<div>
+				<LoadScript id="script-loader" googleMapsApiKey={GOOGLE_API_KEY}>
+					{!this.state.isLoading ? (
+						<GoogleMap
+							id="example-app"
+							mapContainerStyle={{
+								height: '800px',
+								width: '375px',
+							}}
+							zoom={8}
+							center={this.state.position}
+						>
+							<CustomMarker position={this.state.position} info="my location" />
+						</GoogleMap>
+					) : null}
+				</LoadScript>
+			</div>
+		);
+	}
 }
 
 export default MapPageComponent;
