@@ -1,7 +1,19 @@
-import { GET_ALL_NEWS } from './actionTypes';
+import * as actionTypes from './actionTypes';
 import { barNewsApi } from '../../service/api/news';
 
 export const getNewsFeed = () => async dispatch => {
-	const data = await barNewsApi.getNewsFeed();
-	dispatch({ type: GET_ALL_NEWS, data });
+	dispatch({ type: actionTypes.GET_ALL_NEWS });
+
+	try {
+		const data = await barNewsApi.getNewsFeed();
+		dispatch({ type: actionTypes.GET_ALL_NEWS_SUCCESS, payload: data });
+	} catch (e) {
+		dispatch({ type: actionTypes.GET_ALL_NEWS_ERROR });
+	}
+};
+
+export const updateLikeCounter = (index, data) => dispatch => {
+	dispatch({ type: actionTypes.UPDATE_LIKES_COUNTER_SUCCESS, payload: { index, data } });
+	// TODO: make backend request to update likes on backend
+	// TODO:rename action according to new functionaliti
 };

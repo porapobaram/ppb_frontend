@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import FooterComponent from './FooterComponent';
+import { FooterComponent } from './FooterComponent';
 import { connect } from 'react-redux';
 import { string } from 'prop-types';
 
