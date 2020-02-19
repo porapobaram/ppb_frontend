@@ -43,12 +43,12 @@ class BarCrawlPageComponent extends React.Component {
 						})}
 					</Slider>
 				)}
-				<div style={{ textAlign: 'center' }}>
+				<div className="barcrawl-arr">
 					<div>
-						<img alt="Left" src={leftArr} onClick={this.previous} className=""/>
+						<img alt="Left" src={leftArr} onClick={this.previous} className="barcrawl-arr-left"/>
 					</div>
 					<div>
-						<img alt="Right" src={rightArr} onClick={this.next} className=""/>
+						<img alt="Right" src={rightArr} onClick={this.next} className="barcrawl-arr-right"/>
 					</div>
 					
 				</div>

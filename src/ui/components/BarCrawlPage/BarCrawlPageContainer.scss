@@ -7,4 +7,16 @@
 	padding: 10px;
 	height: calc(100% - 170px);
 	overflow: hidden;
+	.barcrawl-arr {
+		display: flex;
+		justify-content: space-between;
+		.barcrawl-arr-left {
+			widows: 100px;
+			height: 50px;
+		}
+		.barcrawl-arr-right {
+			widows: 100px;
+			height: 50px;
+		}
+	}
 }
