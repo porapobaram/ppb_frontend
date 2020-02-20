@@ -12,8 +12,8 @@ class RandomizeScreenContainer extends react.Component {
 
 	onClickHandler = () => {
 		// getRandomBar();
-		// this.props.openModal('USER_SEARCH_BAR_MODAL');
-		this.props.openModal('USER_IN_BAR_MODAL');
+		this.props.openModal('USER_SEARCH_BAR_MODAL');
+		// this.props.openModal('USER_IN_BAR_MODAL');
 	};
 
 	componentDidMount() {

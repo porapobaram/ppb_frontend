@@ -6,6 +6,8 @@
   .toBarModal-container{
 	@include modal-container-style;
 	background: $main-purple;
+	width: 75%;
+	height: 40%;
 	.toBarModal-text{
 	  text-align: center;
 	  color: $white;
