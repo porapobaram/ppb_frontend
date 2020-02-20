@@ -8,7 +8,6 @@ class ModalRoot extends Component {
 		const MODAL_COMPONENTS = {
 			TEST_MODAL: ToBarModalComponent,
 			USER_IN_BAR_MODAL: ImHereModalComponent,
-			/* other modals */
 		};
 		if (!this.props.modalType) {
 			return null;

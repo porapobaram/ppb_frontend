@@ -3,7 +3,7 @@ import RandomizeScreenComponent from './RandomizeScreenComponent';
 import { getRandomBar } from '../../../reduxStore/bar/actions';
 import { connect } from 'react-redux';
 import { push } from 'connected-react-router';
-import { userInBarModal } from '../../../reduxStore/modal/actions';
+import { openModal } from '../../../reduxStore/modal/actions';
 
 class RandomizeScreenContainer extends react.Component {
 	constructor(props) {
@@ -13,8 +13,8 @@ class RandomizeScreenContainer extends react.Component {
 
 	onClickHandler = () => {
 		// getRandomBar();
-		// this.props.openModal('TEST_MODAL');
-		this.props.userInBarModal('USER_IN_BAR_MODAL');
+		this.props.openModal('USER_IN_BAR_MODAL');
+		console.log(this.props.openModal);
 	};
 
 	componentDidMount() {
@@ -29,8 +29,7 @@ class RandomizeScreenContainer extends react.Component {
 const mapDispatchToProps = {
 	getRandomBar,
 	push,
-	// openModal,
-	userInBarModal,
+	openModal,
 };
 
 export default connect(null, mapDispatchToProps)(RandomizeScreenContainer);

@@ -10,7 +10,6 @@ class ImHereModalComponent extends Component {
 	}
 
 	onClickHandler = () => {
-		// eslint-disable-next-line react/destructuring-assignment,react/prop-types
 		this.props.closeModal('CLOSE_MODAL');
 	};
 

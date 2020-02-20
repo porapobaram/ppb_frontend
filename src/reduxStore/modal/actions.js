@@ -6,7 +6,3 @@ export const openModal = (modalType = '', modalProps) => dispatch => {
 export const closeModal = (modalType = '', modalProps) => dispatch => {
 	dispatch({ type: actionTypes.CLOSE_MODAL, payload: { modalType, modalProps } });
 };
-
-export const userInBarModal = (modalType = '', modalProps) => dispatch => {
-	dispatch({ type: actionTypes.USER_IN_BAR_MODAL, payload: { modalType, modalProps } });
-};
