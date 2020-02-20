@@ -16,9 +16,11 @@ class ImHereModalComponent extends Component {
 
 	render() {
 		return (
-			<div className="userInBarModal-wrapper" onClick={this.onClickHandler}>
+			<div className="userInBarModal-wrapper">
 				<div className="userInBarModal-container">
-					<button className="userInBar-button">Я на месте!</button>
+					<button className="userInBar-button" onClick={this.onClickHandler}>
+						Я на месте!
+					</button>
 				</div>
 			</div>
 		);
