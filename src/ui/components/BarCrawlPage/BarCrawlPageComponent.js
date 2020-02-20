@@ -5,16 +5,14 @@ import React from 'react';
 import BarCrawlItem from './BarCrawlItem';
 import { object, func, array } from 'prop-types';
 import './BarCrawlPageContainer.scss';
-import leftArr from './assets/leftArrow.svg';
-import rightArr from './assets/rightArrow.svg';
-
+import lAr from './assets/lAr.svg';
+import rAr from './assets/rAr.svg';
 
 const propTypes = {
 	settings: object,
 	onClickHandler: func,
 	onNextArrow: func,
 	onPreviousArrow: func,
-	ref: func,
 	barCrawlPageData: array,
 };
 
@@ -25,14 +23,17 @@ class BarCrawlPageComponent extends React.Component {
 		this.next = this.next.bind(this);
 		this.previous = this.previous.bind(this);
 	}
+
 	next() {
 		this.slider.slickNext();
-	  }
+	}
+
 	previous() {
 		this.slider.slickPrev();
 	}
+
 	render() {
-		const { settings, onClickHandler, Slider, ref, barCrawlPageData } = this.props;
+		const { settings, onClickHandler, Slider, barCrawlPageData } = this.props;
 		return (
 			<div className="barcrawl-container-wrapper">
 				{barCrawlPageData && (
@@ -45,12 +46,11 @@ class BarCrawlPageComponent extends React.Component {
 				)}
 				<div className="barcrawl-arr">
 					<div>
-						<img alt="Left" src={leftArr} onClick={this.previous} className="barcrawl-arr-left"/>
+						<img alt="Left" src={rAr} onClick={this.previous} className="barcrawl-arr-left" />
 					</div>
 					<div>
-						<img alt="Right" src={rightArr} onClick={this.next} className="barcrawl-arr-right"/>
+						<img alt="Right" src={lAr} onClick={this.next} className="barcrawl-arr-right" />
 					</div>
-					
 				</div>
 			</div>
 		);

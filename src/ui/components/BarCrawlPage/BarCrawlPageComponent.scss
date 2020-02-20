@@ -1,0 +1,13 @@
+.barcrawl-container {
+	position: absolute;
+	width: 100%;
+	height: calc(100%-175px);
+	background-color: #381d5b;
+	.barcrawl-wrapper {
+		background-color: #381d5b;
+		margin-top: 10px;
+		padding: 10px;
+		height: calc(100%-175px);
+		overflow: hidden;
+	}
+}

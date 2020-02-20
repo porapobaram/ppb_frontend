@@ -3,7 +3,7 @@
 	.barcrawl-image {
         border-radius: 15px;
         width: 100%;
-        height: 200px;
+        height: 188px;
         margin-bottom: 15px;
 	}
 	.barcrawl-text {
@@ -14,17 +14,17 @@
 			margin-bottom: 10px;
 			.barcrawl-name {
 				font-family: 'Roboto-Bold';
-				font-size: 24px;
+				font-size: 22px;
 				color: white;
 			}
 			.barcrawl-button {
-				height: 40px;
-				width: 100px;
+				height: 30px;
+				width: 90px;
 				border: 1px solid #0480fb;
 				background:#0480fb;
 				color: white;
 				border-radius: 17px;
-				font-size: 16px;
+				font-size: 13px;
 				font-family: 'Roboto-Bold';
 			}
 		}
@@ -49,8 +49,144 @@
 			font-family: 'Roboto-Regular';
 			font-size: 12px;
 			opacity: 0.6;
-			line-height: 140%;
 			letter-spacing: 0.6px;
+			overflow: hidden;
+    		text-overflow: ellipsis;
+    		display: -webkit-box;
+    		-webkit-line-clamp: 5;
+    		-webkit-box-orient: vertical;
+			line-height: 130%; 
+			max-height: 130%*5;
 		}
 	}
+}
+
+@media (min-width: 321px) {  
+.barcrawl-page-item{
+	.barcrawl-image {
+        border-radius: 15px;
+        width: 100%;
+        height: 250px;
+        margin-bottom: 20px;
+		margin-top: 20px;
+	}
+	.barcrawl-text {
+		padding: 30px 30px;
+		.barcrawl-header {
+			display: flex;
+			justify-content: space-between;
+			margin-bottom: 12px;
+			.barcrawl-name {
+				font-family: 'Roboto-Bold';
+				font-size: 24px;
+				color: white;
+			}
+			.barcrawl-button {
+				height: 40px;
+				width: 100px;
+				border: 1px solid #0480fb;
+				background:#0480fb;
+				color: white;
+				border-radius: 17px;
+				font-size: 16px;
+				font-family: 'Roboto-Bold';
+			}
+		}
+		.barcrawl-time-price {
+			display: flex;
+			justify-content: space-between;
+			margin-bottom: 20px;
+			.barcrawl-time {
+				font-family: 'Roboto-Regular';
+				font-size: 14px;
+				color: #ffcc33;
+			}
+			.barcrawl-price {
+				align-items: center;
+				font-family: 'Roboto-Regular';
+				font-size: 14px;
+				color: #ffcc33;
+			}
+		}
+		.barcrawl-description {
+			color: white;
+			font-family: 'Roboto-Regular';
+			font-size: 16px;
+			opacity: 0.6;
+			letter-spacing: 0.8px;
+			overflow: hidden;
+    		text-overflow: ellipsis;
+    		display: -webkit-box;
+    		-webkit-line-clamp: 5;
+    		-webkit-box-orient: vertical;
+			line-height: 140%; 
+			max-height: 140%*5;
+		}
+	}
+}
+}
+
+@media (max-width: 360px) {
+.barcrawl-page-item{
+	.barcrawl-image {
+        border-radius: 15px;
+        width: 100%;
+        height: 188px;
+        margin-bottom: 15px;
+	}
+	.barcrawl-text {
+		padding: 0 20px;
+		.barcrawl-header {
+			display: flex;
+			justify-content: space-between;
+			margin-bottom: 10px;
+			.barcrawl-name {
+				font-family: 'Roboto-Bold';
+				font-size: 22px;
+				color: white;
+			}
+			.barcrawl-button {
+				height: 30px;
+				width: 90px;
+				border: 1px solid #0480fb;
+				background:#0480fb;
+				color: white;
+				border-radius: 17px;
+				font-size: 13px;
+				font-family: 'Roboto-Bold';
+			}
+		}
+		.barcrawl-time-price {
+			display: flex;
+			justify-content: space-between;
+			margin-bottom: 10px;
+			.barcrawl-time {
+				font-family: 'Roboto-Regular';
+				font-size: 14px;
+				color: #ffcc33;
+			}
+			.barcrawl-price {
+				align-items: center;
+				font-family: 'Roboto-Regular';
+				font-size: 14px;
+				color: #ffcc33;
+			}
+		}
+		.barcrawl-description {
+			color: white;
+			font-family: 'Roboto-Regular';
+			font-size: 12px;
+			opacity: 0.6;
+			letter-spacing: 0.6px;
+			overflow: hidden;
+    		text-overflow: ellipsis;
+    		display: -webkit-box;
+    		-webkit-line-clamp: 5;
+    		-webkit-box-orient: vertical;
+			line-height: 130%; 
+			max-height: 130%*5;
+		}
+	}
+}
+
 }
