@@ -6,7 +6,7 @@ import ImHereModalComponent from '../Modals/ImHereModal/ImHereModalComponent';
 class ModalRoot extends Component {
 	render() {
 		const MODAL_COMPONENTS = {
-			TEST_MODAL: ToBarModalComponent,
+			USER_SEARCH_BAR_MODAL: ToBarModalComponent,
 			USER_IN_BAR_MODAL: ImHereModalComponent,
 			/* other modals */
 		};
