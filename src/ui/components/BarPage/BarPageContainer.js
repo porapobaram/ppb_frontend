@@ -36,7 +36,7 @@ class BarPageContainer extends Component {
 	}
 
 	componentDidMount() {
-		const { effort, push } = this.props;
+		const { push } = this.props;
 		const savedEfforts = Number(cookie.load('effort'));
 		console.log({ savedEfforts });
 		if (savedEfforts > MAX_EFFORT) {
@@ -49,7 +49,7 @@ class BarPageContainer extends Component {
 		const updatedEffort = Number(effort + 1);
 		this.props.setBarEffort(updatedEffort);
 		cookie.save('effort', updatedEffort, { path: '/' }, { expires: getDateExpires(1) });
-		cookie.save('lastBarVisited', JSON.stringify(this.props.randomBar), { path: '/barPage' });
+		cookie.save('lastBarVisited', encodeURI(JSON.stringify(this.props.randomBar)), { path: '/' });
 	}
 
 	onClickHandler = () => {
