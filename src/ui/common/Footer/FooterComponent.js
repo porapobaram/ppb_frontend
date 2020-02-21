@@ -30,4 +30,4 @@ const FooterComponent = () => (
 	</footer>
 );
 
-export default FooterComponent;
+export { FooterComponent };
