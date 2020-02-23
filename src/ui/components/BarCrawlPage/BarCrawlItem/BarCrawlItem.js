@@ -15,21 +15,22 @@ const propTypes = {
 const BarCrawlItem = ({ item, onClickHandler }) => {
 	const { bcImage, bcName, bcTime, bcPrice, bcDescription } = item;
 	return (
-		<div className="barcrawl-page-item">
-			<img alt="Bar" src={bcImage} className="barcrawl-image" />
-			<div className="barcrawl-text">
-				<div className="barcrawl-header">
-					<h2 className="barcrawl-name">{bcName}</h2>
-					<button className="barcrawl-button" type="button" onClick={onClickHandler}>
+		<div className="bc-page-item">
+			<div className="bc-header">
+				<div className="bc-image-wrapper">
+					<img alt="Bar" src={bcImage} className="bc-image" />
+				</div>
+				<div className="bc-left-block">
+					<h2 className="bc-name">{bcName}</h2>
+					<p className="bc-time">{bcTime}</p>
+					<p className="bc-price">{bcPrice}</p>
+					<button className="bc-button" type="button" onClick={onClickHandler}>
 						Подробнее
 					</button>
 				</div>
-				<div className="barcrawl-time-price">
-					<p className="barcrawl-time">{bcTime}</p>
-					<p className="barcrawl-price">{bcPrice}</p>
-				</div>
-				<p className="barcrawl-description">{bcDescription}</p>
 			</div>
+
+			<p className="bc-description">{bcDescription}</p>
 		</div>
 	);
 };

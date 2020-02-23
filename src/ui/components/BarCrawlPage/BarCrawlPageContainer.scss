@@ -1,8 +1,14 @@
-.barcrawl-container-wrapper {
-	background-color: #381d5b;
-	padding: 10px;
-	height: 80vh;
+@import '../../styles/colors.scss';
+@import '../../styles/fonts.scss';
+
+.barcrawl-container {
+	background-color: $main-purple;
 	overflow: hidden;
+	position: relative;
+	height: calc(100vh - 200px);
+	.barcrawl-wrapper {
+		margin: 10px;
+	}
 	.barcrawl-arr {
 		display: flex;
 		justify-content: space-between;

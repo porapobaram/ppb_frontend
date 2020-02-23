@@ -18,7 +18,6 @@ export const setBarEffort = effort => dispatch => {
 export const addRandomBar = data => (dispatch, getState) => {
 	dispatch({ type: ADD_TO_ALL_RANDOM_BARS, payload: data });
 	const { allRandomBars } = getState().randomBarReducer;
-	console.log(allRandomBars);
 	localStorage.setItem('allBarsShown', encodeURI(JSON.stringify(allRandomBars)));
 };
 

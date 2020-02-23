@@ -35,15 +35,16 @@ class BarCrawlPageComponent extends React.Component {
 	render() {
 		const { settings, onClickHandler, Slider, barCrawlPageData } = this.props;
 		return (
-			<div className="barcrawl-container-wrapper">
-				{barCrawlPageData && (
-					<Slider ref={c => (this.slider = c)} {...settings}>
-						{barCrawlPageData.map(item => {
-							console.log(item);
-							return <BarCrawlItem onClickHandler={onClickHandler} key={item.bcName} item={item} />;
-						})}
-					</Slider>
-				)}
+			<div className="barcrawl-container">
+				<div className="barcrawl-wrapper">
+					{barCrawlPageData && (
+						<Slider ref={c => (this.slider = c)} {...settings}>
+							{barCrawlPageData.map(item => {
+								return <BarCrawlItem onClickHandler={onClickHandler} key={item.bcName} item={item} />;
+							})}
+						</Slider>
+					)}
+				</div>
 				<div className="barcrawl-arr">
 					<div>
 						<img alt="Left" src={rAr} onClick={this.previous} className="barcrawl-arr-left" />
