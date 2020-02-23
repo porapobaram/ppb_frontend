@@ -1,12 +1,14 @@
-@import "src/ui/styles/modals";
-@import "src/ui/styles/colors";
+@import '../../../styles/modals';
+@import '../../../styles/colors';
 
-.toBarModal-wrapper{
+.toBarModal-wrapper {
   @include modal-wrapper-style;
-  .toBarModal-container{
+  .toBarModal-container {
 	@include modal-container-style;
 	background: $main-purple;
-	.toBarModal-text{
+	width: 75%;
+	height: 40%;
+	.toBarModal-text {
 	  text-align: center;
 	  color: $white;
 	  font-family: 'Roboto-Regular', sans-serif;
@@ -16,10 +18,10 @@
 	  border-top-left-radius: 10px;
 	  border-top-right-radius: 10px;
 	  line-height: normal;
-	  display: table-cell;
+	  display: table-cell; //Обрати сюда внимание!!!
 	  vertical-align: middle;
 	}
-	.toBarModal-icon{
+	.toBarModal-icon {
 	  width: 90%;
 	  height: calc(100% - 40px);
 	  margin-top: 10px;
