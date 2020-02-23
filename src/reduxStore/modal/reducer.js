@@ -1,4 +1,4 @@
-import { OPEN_MODAL, CLOSE_MODAL, USER_IN_BAR_MODAL } from './actionTypes';
+import { OPEN_MODAL, CLOSE_MODAL } from './actionTypes';
 
 const initialState = {
 	modalType: '',
@@ -17,12 +17,6 @@ export function modalReducer(state = initialState, action) {
 				...state,
 				modalType: '',
 				modalProps: '',
-			};
-		case USER_IN_BAR_MODAL:
-			return {
-				...state,
-				modalType: action.payload.modalType,
-				modalProps: action.payload.modalProps,
 			};
 		default:
 			return state;
