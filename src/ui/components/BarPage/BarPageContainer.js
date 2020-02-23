@@ -9,6 +9,7 @@ import { push } from 'connected-react-router';
 import cookie from 'react-cookies';
 import { MAX_EFFORT } from '../../../config';
 import { getDateExpires } from '../../../service/helpers/cookieHelpers';
+import { openModal } from '../../../reduxStore/modal/actions';
 
 const propTypes = {
 	randomBar: object,
@@ -58,8 +59,12 @@ class BarPageContainer extends Component {
 	};
 
 	onClickHandlerMaps = () => {
-		const { push } = this.props;
+		const { push, openModal } = this.props;
 		push('/map');
+		setTimeout(() => {
+			console.log('5 sec');
+			openModal('USER_GET_BONUS_MODAL');
+		}, 3000);
 	};
 
 	render() {
@@ -99,6 +104,7 @@ const mapStateToProps = state => {
 const mapDispatchToProps = {
 	setBarEffort,
 	push,
+	openModal,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(BarPageContainer);

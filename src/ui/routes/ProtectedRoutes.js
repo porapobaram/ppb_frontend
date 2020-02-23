@@ -5,11 +5,14 @@ import NotFound from '../components/NotFound';
 import BarCrawlPage from '../components/BarCrawlPage';
 import FeedPage from '../components/FeedPage';
 import Header from '../common/Header';
+import ModalRoot from '../components/ModalRoot';
+import Maps from '../components/Maps';
 import RandomizeScreenContainer from '../components/RandomizeScreen/RandomizeScreenContainer';
 import BarPage from '../components/BarPage';
 
 const ProtectedRoutes = () => (
 	<div>
+		<ModalRoot />
 		{/* header placement */}
 		<Header />
 		{/* header placement end */}
@@ -32,7 +35,7 @@ const ProtectedRoutes = () => (
 				<FeedPage />
 			</Route>
 			<Route exact path="/map">
-				<p>maps</p>
+				<Maps />
 			</Route>
 			<Route component={NotFound} />
 		</Switch>

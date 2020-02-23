@@ -2,6 +2,7 @@ import React, * as react from 'react';
 import RandomizeScreenComponent from './RandomizeScreenComponent';
 import { getRandomBar } from '../../../reduxStore/bar/actions';
 import { connect } from 'react-redux';
+import { openModal } from '../../../reduxStore/modal/actions';
 import { push } from 'connected-react-router';
 
 class RandomizeScreenContainer extends react.Component {
@@ -33,6 +34,7 @@ const mapStateToProps = state => {
 };
 const mapDispatchToProps = {
 	getRandomBar,
+	openModal,
 	push,
 };
 

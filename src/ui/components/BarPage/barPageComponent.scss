@@ -196,6 +196,9 @@
 }
 .buttons-container {
   display: flex;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
   .one-more {
     display: flex;
     width: 49.7%;
