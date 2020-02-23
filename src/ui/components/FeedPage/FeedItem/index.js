@@ -4,7 +4,7 @@ import commentImg from '../img/comment.svg';
 import '../FeedComponent.scss';
 
 const FeedItem = ({ newsItem, index }) => {
-	const { accountName, postTime, iconImage, postText, postPhoto, likes, comments } = newsItem;
+	const { accountName, postTime, iconImage, postText, postPhoto, likes } = newsItem;
 	return (
 		<div className="wrapper">
 			<div className="feed-bar">
