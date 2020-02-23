@@ -7,11 +7,15 @@ import { PublicRoutes } from './ui/routes/PublicRoutes';
 import NotFound from './ui/components/NotFound';
 import { history } from './reduxStore/store';
 import cookie from 'react-cookies';
-import { setBarEffort } from './reduxStore/bar/actions';
+import { setBarEffort, initAllRandomBars } from './reduxStore/bar/actions';
 
 class App extends react.Component {
 	componentDidMount() {
 		const savedEfforts = Number(cookie.load('effort')) || 1;
+		const allRandomBarsLs = localStorage.getItem('allBarsShown');
+		const allRandomBarsObj = decodeURI(allRandomBarsLs);
+
+		this.props.initAllRandomBars(JSON.parse(allRandomBarsObj) || []);
 		this.props.setBarEffort(savedEfforts);
 	}
 
@@ -30,6 +34,7 @@ class App extends react.Component {
 
 const mapDispatchToProps = {
 	setBarEffort,
+	initAllRandomBars,
 };
 
 export default connect(null, mapDispatchToProps)(App);

@@ -1,7 +1,3 @@
-* {
-	padding: 0;
-	margin: 0;
-	}
 .barcrawl-container-wrapper {
 	background-color: #381d5b;
 	padding: 10px;
@@ -11,11 +7,9 @@
 		display: flex;
 		justify-content: space-between;
 		.barcrawl-arr-left {
-			widows: 100px;
 			height: 50px;
 		}
 		.barcrawl-arr-right {
-			widows: 100px;
 			height: 50px;
 		}
 	}

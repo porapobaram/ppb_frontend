@@ -1,5 +1,4 @@
 import React from 'react';
-import './LikesComponent.scss';
 import likeImg from './img/like.svg';
 import { func, number } from 'prop-types';
 

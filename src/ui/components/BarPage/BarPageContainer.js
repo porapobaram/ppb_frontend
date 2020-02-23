@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import BarPageComponent from './BarPageComponent';
 import { connect } from 'react-redux';
 import { array, func, object, string, number } from 'prop-types';
-import { setBarEffort } from '../../../reduxStore/bar/actions';
+import { setBarEffort, addRandomBar } from '../../../reduxStore/bar/actions';
 import Slider from 'react-slick';
 import { push } from 'connected-react-router';
 import cookie from 'react-cookies';
@@ -49,7 +49,7 @@ class BarPageContainer extends Component {
 		const updatedEffort = Number(effort + 1);
 		this.props.setBarEffort(updatedEffort);
 		cookie.save('effort', updatedEffort, { path: '/' }, { expires: getDateExpires(1) });
-		cookie.save('lastBarVisited', encodeURI(JSON.stringify(this.props.randomBar)), { path: '/' });
+		this.props.addRandomBar(this.props.randomBar);
 	}
 
 	onClickHandler = () => {
@@ -94,11 +94,13 @@ const mapStateToProps = state => {
 	return {
 		randomBar: state.randomBarReducer.randomBar,
 		effort: state.randomBarReducer.effort,
+		allRandomBars: state.randomBarReducer.allRandomBars,
 	};
 };
 const mapDispatchToProps = {
 	setBarEffort,
 	push,
+	addRandomBar,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(BarPageContainer);

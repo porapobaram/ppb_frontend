@@ -2,6 +2,7 @@ import React from 'react';
 import './RandomizeScreenComponent.scss';
 
 import { func, bool } from 'prop-types';
+import cookie from 'react-cookies';
 
 const propTypes = {
 	onClickHandler: func,

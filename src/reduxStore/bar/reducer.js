@@ -1,4 +1,4 @@
-import { GET_RANDOM_BAR, SET_BAR_EFFORT } from './actionTypes';
+import { GET_RANDOM_BAR, SET_BAR_EFFORT, ADD_TO_ALL_RANDOM_BARS, INIT_ALL_RANDOM_BARS } from './actionTypes';
 
 const initialState = {
 	randomBar: {
@@ -17,6 +17,7 @@ const initialState = {
 		],
 		sliderPhotos: [],
 	},
+	allRandomBars: [],
 	effort: 1,
 	buttonDisabled: false,
 };
@@ -33,6 +34,16 @@ export function randomBarReducer(state = initialState, action) {
 				...state,
 				effort: action.payload,
 				buttonDisabled: action.disabledButton,
+			};
+		case ADD_TO_ALL_RANDOM_BARS:
+			return {
+				...state,
+				allRandomBars: [...state.allRandomBars, action.payload],
+			};
+		case INIT_ALL_RANDOM_BARS:
+			return {
+				...state,
+				allRandomBars: action.payload,
 			};
 		default:
 			return state;
