@@ -1,9 +1,9 @@
-@import "src/ui/styles/modals";
-@import "src/ui/styles/colors";
+@import '../../../styles/modals';
+@import '../../../styles/colors';
 
-.userInBarModal-wrapper{
+.userInBarModal-wrapper {
   @include modal-wrapper-style;
-  .userInBarModal-container{
+  .userInBarModal-container {
 	@include modal-container-style;
 	background: url("ImHereModal-circles.png") center no-repeat;
 	width: 100%;

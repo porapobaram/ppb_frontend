@@ -1,5 +1,5 @@
-@import "src/ui/styles/modals";
-@import "src/ui/styles/colors";
+@import '../../../styles/modals';
+@import '../../../styles/colors';
 
 .bonusBarModal-wrapper {
   @include modal-wrapper-style;

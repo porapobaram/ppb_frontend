@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import ToBarModalComponent from '../Modals/ToBarModal';
 import ImHereModalComponent from '../Modals/ImHereModal/ImHereModalComponent';
-import BonusBarModalComponent from "../Modals/BonusBarModal/BonusBarModalComponent";
+import BonusBarModalComponent from '../Modals/BonusBarModal/BonusBarModalComponent';
 
 class ModalRoot extends Component {
 	render() {
