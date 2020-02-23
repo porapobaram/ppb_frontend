@@ -9,7 +9,6 @@ import { history } from './reduxStore/store';
 import cookie from 'react-cookies';
 import { setBarEffort } from './reduxStore/bar/actions';
 
-// eslint-disable-next-line react/prefer-stateless-function
 class App extends react.Component {
 	componentDidMount() {
 		const savedEfforts = Number(cookie.load('effort')) || 1;
