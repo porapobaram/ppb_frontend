@@ -36,6 +36,14 @@ class BarCrawlPageComponent extends React.Component {
 		const { settings, onClickHandler, Slider, barCrawlPageData } = this.props;
 		return (
 			<div className="barcrawl-container-wrapper">
+				<div className="barcrawl-arr">
+					<div className="barcrawl-arr-left">
+						<img alt="Left" src={rAr} onClick={this.previous} />
+					</div>
+					<div className="barcrawl-arr-right">
+						<img alt="Right" src={lAr} onClick={this.next} />
+					</div>
+				</div>
 				{barCrawlPageData && (
 					<Slider ref={c => (this.slider = c)} {...settings}>
 						{barCrawlPageData.map(item => {
@@ -44,14 +52,6 @@ class BarCrawlPageComponent extends React.Component {
 						})}
 					</Slider>
 				)}
-				<div className="barcrawl-arr">
-					<div>
-						<img alt="Left" src={rAr} onClick={this.previous} className="barcrawl-arr-left" />
-					</div>
-					<div>
-						<img alt="Right" src={lAr} onClick={this.next} className="barcrawl-arr-right" />
-					</div>
-				</div>
 			</div>
 		);
 	}

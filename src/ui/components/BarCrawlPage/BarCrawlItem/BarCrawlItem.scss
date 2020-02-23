@@ -4,10 +4,11 @@
         border-radius: 15px;
         width: 100%;
         height: 188px;
-        margin-bottom: 15px;
+        margin-bottom: 5px;
+		margin: 0 auto;
 	}
 	.barcrawl-text {
-		padding: 0 20px;
+		padding: 0 10px;
 		.barcrawl-header {
 			display: flex;
 			justify-content: space-between;
@@ -53,10 +54,10 @@
 			overflow: hidden;
     		text-overflow: ellipsis;
     		display: -webkit-box;
-    		-webkit-line-clamp: 5;
+    		-webkit-line-clamp: 3;
     		-webkit-box-orient: vertical;
 			line-height: 130%; 
-			max-height: 130%*5;
+			max-height: 130%*3;
 		}
 	}
 }
@@ -65,10 +66,9 @@
 .barcrawl-page-item{
 	.barcrawl-image {
         border-radius: 15px;
-        width: 100%;
+        width: 85%;
         height: 250px;
-        margin-bottom: 20px;
-		margin-top: 20px;
+		margin-top: 5px;
 	}
 	.barcrawl-text {
 		padding: 30px 30px;
@@ -117,10 +117,11 @@
 			overflow: hidden;
     		text-overflow: ellipsis;
     		display: -webkit-box;
-    		-webkit-line-clamp: 5;
+    		-webkit-line-clamp: 3;
     		-webkit-box-orient: vertical;
 			line-height: 140%; 
-			max-height: 140%*5;
+			max-height: 140%*3;
+			margin-bottom: -20px;
 		}
 	}
 }
@@ -181,10 +182,10 @@
 			overflow: hidden;
     		text-overflow: ellipsis;
     		display: -webkit-box;
-    		-webkit-line-clamp: 5;
+    		-webkit-line-clamp: 3;
     		-webkit-box-orient: vertical;
 			line-height: 130%; 
-			max-height: 130%*5;
+			max-height: 130%*3;
 		}
 	}
 }

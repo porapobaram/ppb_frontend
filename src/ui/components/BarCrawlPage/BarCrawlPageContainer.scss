@@ -3,20 +3,26 @@
 	margin: 0;
 	}
 .barcrawl-container-wrapper {
-	background-color: #381d5b;
-	padding: 10px;
-	height: 80vh;
-	overflow: hidden;
+	background-color: #412366;
+	padding: 5px 5px;
+	height: calc(100%-160px);
 	.barcrawl-arr {
 		display: flex;
 		justify-content: space-between;
+		position: absolute;
+		z-index: 999;
+		top: 200px;
+		width: 100%;
 		.barcrawl-arr-left {
-			widows: 100px;
-			height: 50px;
+			position: absolute;
 		}
 		.barcrawl-arr-right {
-			widows: 100px;
-			height: 50px;
+			position: absolute;
+			right: 0;
 		}
+		img {
+			height: 40px;
+		}
+		
 	}
 }
