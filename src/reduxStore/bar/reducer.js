@@ -9,6 +9,26 @@ const initialState = {
 		phone: '',
 		formattedPhone: '',
 		fbLink: '',
+		location: [
+			{
+				address: '',
+				lat: '',
+				lng: '',
+				labeledLatLngs: [
+					{
+						label: '',
+						lat: '',
+						lng: '',
+					},
+				],
+				postalCode: '',
+				cc: '',
+				city: '',
+				state: '',
+				country: '',
+				formattedAddress: [],
+			},
+		],
 		openHours: [
 			{
 				days: '',

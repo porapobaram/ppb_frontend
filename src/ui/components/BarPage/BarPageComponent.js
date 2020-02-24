@@ -46,7 +46,7 @@ const BarPageComponent = ({ randomBarObject, settings, Slider, effort, onClickHa
 			</div>
 			<div className="bar-header">
 				<h1>{randomBarObject.barName}</h1>
-				<p>{randomBarObject.address}</p>
+				<p>{randomBarObject.location['address']}</p>
 			</div>
 
 			<div className="bonus-container">

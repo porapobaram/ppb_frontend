@@ -4,7 +4,7 @@
 
 .button_wrapper {
   width: 100%;
-  height: calc(100% - 150px);
+  height: calc(100% - 170px);
   position: absolute;
   background: linear-gradient(
     0deg,
@@ -37,8 +37,4 @@
       border: none;
     }
   }
-}
-
-@media screen {
-
 }

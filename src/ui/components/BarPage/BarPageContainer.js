@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import BarPageComponent from './BarPageComponent';
 import { connect } from 'react-redux';
-import { array, func, object, string, number } from 'prop-types';
+import { array, func, object, number } from 'prop-types';
 import { setBarEffort, addRandomBar } from '../../../reduxStore/bar/actions';
 import Slider from 'react-slick';
 import { push } from 'connected-react-router';
@@ -12,13 +12,6 @@ import { getDateExpires } from '../../../service/helpers/cookieHelpers';
 
 const propTypes = {
 	randomBar: object,
-	barName: string,
-	address: string,
-	bonus: string,
-	barInfo: string,
-	phone: string,
-	fbLink: string,
-	formattedPhone: string,
 	effort: number,
 	openHours: array,
 	sliderPhotos: array,
@@ -26,6 +19,7 @@ const propTypes = {
 	setBarEffort: func,
 	onClickHandler: func,
 	onClickHandlerMaps: func,
+	addRandomBar: func,
 };
 
 class BarPageContainer extends Component {
