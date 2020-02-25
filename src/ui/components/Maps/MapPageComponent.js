@@ -2,6 +2,7 @@ import React from 'react';
 import { GoogleMap, LoadScript, DirectionsService, DirectionsRenderer } from '@react-google-maps/api';
 import './mapPageComponent.scss';
 import CustomMarker from './CustomMarker';
+import ModalRoot from '../ModalRoot';
 import { GOOGLE_API_KEY, MAP_STAGE } from '../../../config';
 import { Spinner } from '../Spinner';
 import { object, string, func } from 'prop-types';
@@ -60,8 +61,12 @@ class MapPageComponent extends React.Component {
 
 			if (JSON.stringify(barPositionForCompare) === JSON.stringify(locationPositionToRedux)) {
 				console.log(`осталось 50 м`);
+				// <ModalRoot />;
 			}
 			// setTimeout(setMyLocation(locationPositionToRedux), 10000);
+			// const TEST = { lat: 48.379433, lng: 31.16558 };
+			// setMyLocation(TEST);
+
 			console.log(`myLocationPositionCHANGE`);
 		}
 	}
@@ -116,6 +121,7 @@ class MapPageComponent extends React.Component {
 		const { barPosition, locationToBar, setMyLocation } = this.props;
 		console.log(`barLONG${JSON.stringify(barPosition)}`);
 		console.log(`locationPositionLONG${JSON.stringify(locationPosition)}`);
+
 		// const options = {
 		// 	strokeColor: '#8c9fff',
 		// 	strokeOpacity: 0.8,

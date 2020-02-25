@@ -21,8 +21,8 @@ const propTypes = {
 class MapPageContainer extends Component {
 	componentDidMount() {
 		this.props.getCurrentUsers();
-		// this.props.setMapState(MAP_STAGE.DIRECTION);
-		this.props.setMapState(MAP_STAGE.PEOPLENEARBY);
+		this.props.setMapState(MAP_STAGE.DIRECTION);
+		// this.props.setMapState(MAP_STAGE.PEOPLENEARBY);
 		// this.props.setMapState(MAP_STAGE.DISABLED);
 	}
 
