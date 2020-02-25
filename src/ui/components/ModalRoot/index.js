@@ -1,8 +1,10 @@
+/* eslint-disable react/prefer-stateless-function */
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import ToBarModalComponent from '../Modals/ToBarModal';
 import ImHereModalComponent from '../Modals/ImHereModal/ImHereModalComponent';
 import BonusBarModalComponent from '../Modals/BonusBarModal/BonusBarModalComponent';
+import CommentsModal from '../Modals/CommentsModal';
 
 class ModalRoot extends Component {
 	render() {
@@ -10,6 +12,7 @@ class ModalRoot extends Component {
 			USER_SEARCH_BAR_MODAL: ToBarModalComponent,
 			USER_IN_BAR_MODAL: ImHereModalComponent,
 			USER_GET_BONUS_MODAL: BonusBarModalComponent,
+			COMMENTS_MODAL: CommentsModal,
 			/* other modals */
 		};
 		if (!this.props.modalType) {
