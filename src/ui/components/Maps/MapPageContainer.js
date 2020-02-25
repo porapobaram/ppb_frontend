@@ -14,7 +14,6 @@ const propTypes = {
 	positionBar: object,
 	locationToBar: object,
 	currentUsers: array,
-	barName: string,
 	mapStage: string,
 };
 

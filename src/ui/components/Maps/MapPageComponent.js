@@ -42,30 +42,27 @@ class MapPageComponent extends React.Component {
 	componentDidUpdate(prevProps) {
 		const { setMyLocation, barPosition } = this.props;
 		const { locationPosition } = this.state;
+
 		if (JSON.stringify(locationPosition) !== '{}' && locationPosition !== prevProps.locationPosition) {
+			const locationPositionToRedux = {
+				lat: parseFloat(locationPosition.lat).toFixed(3),
+				lng: parseFloat(locationPosition.lng).toFixed(3),
+			};
 
-			if (JSON.stringify(locationPosition) !== '{}' && locationPosition !== prevProps.locationPosition) {
+			console.log(`locationPositionSHORT${JSON.stringify(locationPositionToRedux)}`);
 
-				const locationPositionToRedux = Object.assign({},
-					{lat: parseFloat(locationPosition.lat).toFixed(3),
-						lng: parseFloat(locationPosition.lng).toFixed(3),
-					}
-				);
+			const barPositionForCompare = {
+				lat: parseFloat(barPosition.lat).toFixed(3),
+				lng: parseFloat(barPosition.lng).toFixed(3),
+			};
 
-				console.log(`locationPositionSHORT${JSON.stringify(locationPositionToRedux)}`);
+			console.log(`barPositionSHORT${JSON.stringify(barPositionForCompare)}`);
 
-				const barPositionForCompare = Object.assign({},
-					{lat: parseFloat(barPosition.lat).toFixed(3),
-					lng: parseFloat(barPosition.lng).toFixed(3)});
-
-				console.log(`barPositionSHORT${JSON.stringify(barPositionForCompare)}`);
-
-				if (JSON.stringify(barPositionForCompare) === JSON.stringify(locationPositionToRedux)) {
-					console.log(`осталось 50 м`);
-				}
-				// setTimeout(setMyLocation(locationPositionToRedux), 10000);
-				console.log(`myLocationPositionCHANGE`);
+			if (JSON.stringify(barPositionForCompare) === JSON.stringify(locationPositionToRedux)) {
+				console.log(`осталось 50 м`);
 			}
+			// setTimeout(setMyLocation(locationPositionToRedux), 10000);
+			console.log(`myLocationPositionCHANGE`);
 		}
 	}
 
@@ -174,16 +171,15 @@ class MapPageComponent extends React.Component {
 				<LoadScript id="script-loader" loadingElement={<Spinner />} googleMapsApiKey={GOOGLE_API_KEY}>
 					{!isLoading ? (
 						<GoogleMap id="example-app" zoom={8} center={locationPosition}>
-							{currentUsers.map(user => {
+							{currentUsers.map((user, id) => {
 								return (
 									<CustomMarker
-										key={user.link} // should be uniq id
+										key={id}
 										name={user.name}
 										image={user.image}
 										sex={user.sex}
+										link={user.link}
 										position={user.ll}
-										info="My Location"
-										// locationPosition={this.state.locationPosition}
 									/>
 								);
 							})}
