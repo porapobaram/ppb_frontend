@@ -2,7 +2,7 @@
 @import '../../styles/fonts.scss';
 
 .barcrawl-wrapper {
-  background-color: $main-purple;
+  background: $purple-gradient-background;
   overflow: hidden;
   position: relative;
   height: calc(100vh - 165px);

@@ -10,3 +10,16 @@ $main-blue: #0480FC;
 
 $main-purple: #412366;
 
+$purple-gradient-background:
+		linear-gradient(
+				0deg,
+				rgba(49, 25, 81, 1) 0%,
+				rgba(65, 34, 102, 1) 50%
+);
+
+$blue-gradient-background:
+		linear-gradient(
+				0deg,
+				rgba(45, 104, 183, 1) 40%,
+				rgba(1, 150, 255, 1) 100%
+);
