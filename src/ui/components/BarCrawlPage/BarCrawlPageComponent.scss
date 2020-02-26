@@ -1,0 +1,25 @@
+@import '../../styles/colors.scss';
+@import '../../styles/fonts.scss';
+
+.barcrawl-wrapper {
+  background: $purple-gradient-background;
+  overflow: hidden;
+  position: relative;
+  height: calc(100vh - 165px);
+  .barcrawl-container {
+	margin: 10px;
+  }
+  .barcrawl-arrows {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	height: 50px;
+	padding: 10px;
+	.barcrawl-arr-left {
+	  height: 50px;
+	}
+	.barcrawl-arr-right {
+	  height: 50px;
+	}
+  }
+}

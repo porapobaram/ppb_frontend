@@ -1,18 +1,13 @@
-@import 'src/ui/styles/reset';
 @import "src/ui/styles/fonts";
 @import "src/ui/styles/colors";
 
 .button_wrapper {
   width: 100%;
-  height: calc(100% - 170px);
+  height: calc(100% - 150px);
   position: absolute;
-  background: linear-gradient(
-    0deg,
-    rgba(49, 25, 81, 1) 0%,
-    rgba(65, 34, 102, 1) 50%
-  );
+  background: $purple-gradient-background;
   .button_container {
-    background: url('../../../assets/img/Circles.png') center/contain no-repeat;
+    background: url('Circles.png') center/cover no-repeat;
     height: 100%;
     position: relative;
     display: flex;
@@ -28,13 +23,10 @@
       text-align: center;
       font-size: 40px;
       font-family: 'Roboto-Bold', sans-serif;
-      background: linear-gradient(
-        0deg,
-        rgba(45, 104, 183, 1) 40%,
-        rgba(1, 150, 255, 1) 100%
-      );
+      background: $blue-gradient-background;
       border-radius: 50%;
       border: none;
     }
   }
 }
+

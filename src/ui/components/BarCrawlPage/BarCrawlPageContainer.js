@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 import BarCrawlPageComponent from './BarCrawlPageComponent';
 import { connect } from 'react-redux';
-import { func } from 'prop-types';
+import { func, array } from 'prop-types';
 import Slider from 'react-slick';
 
 import { getAllBarcrawls } from '../../../reduxStore/barCrawl/actions';
 
 const propTypes = {
 	getAllBarcrawls: func,
+	barCrawlData: array,
 };
 
 class BarCrawlPageContainer extends Component {
@@ -23,8 +24,8 @@ class BarCrawlPageContainer extends Component {
 		this.props.getAllBarcrawls();
 	}
 
-	onClickHandler = () => {
-		console.log('test');
+	onClickHandler = e => {
+		e.preventDefault();
 	};
 
 	next() {
@@ -44,13 +45,13 @@ class BarCrawlPageContainer extends Component {
 			slidesToScroll: 1,
 			arrows: false,
 		};
+		const { barCrawlData } = this.props;
 		return (
 			<BarCrawlPageComponent
+				barCrawlPageData={barCrawlData}
 				Slider={Slider}
 				onClickHandler={this.onClickHandler}
 				settings={settings}
-				slickNext={this.next}
-				slickPrev={this.previous}
 			/>
 		);
 	}
@@ -58,6 +59,12 @@ class BarCrawlPageContainer extends Component {
 
 BarCrawlPageContainer.propTypes = propTypes;
 
+function mapStateToProps(state) {
+	return {
+		barCrawlData: state.barCrawlReducer.barCrawlPageData,
+	};
+}
+
 const mapDispatchToProps = { getAllBarcrawls };
 
-export default connect(null, mapDispatchToProps)(BarCrawlPageContainer);
+export default connect(mapStateToProps, mapDispatchToProps)(BarCrawlPageContainer);

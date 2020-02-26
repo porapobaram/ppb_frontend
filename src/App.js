@@ -1,28 +1,40 @@
 import React, * as react from 'react';
-import { Provider } from 'react-redux';
+import { connect } from 'react-redux';
 import { ConnectedRouter } from 'connected-react-router';
 import { Switch, Route } from 'react-router-dom';
 import { ProtectedRoutes } from './ui/routes/ProtectedRoutes';
 import { PublicRoutes } from './ui/routes/PublicRoutes';
 import NotFound from './ui/components/NotFound';
-import configureStore, { history } from './reduxStore/store';
+import { history } from './reduxStore/store';
+import cookie from 'react-cookies';
+import { setBarEffort, initAllRandomBars } from './reduxStore/bar/actions';
 
-// eslint-disable-next-line react/prefer-stateless-function
 class App extends react.Component {
+	componentDidMount() {
+		const savedEfforts = Number(cookie.load('effort')) || 1;
+		const allRandomBarsLs = localStorage.getItem('allBarsShown');
+		const allRandomBarsObj = decodeURI(allRandomBarsLs);
+
+		this.props.initAllRandomBars(JSON.parse(allRandomBarsObj) || []);
+		this.props.setBarEffort(savedEfforts);
+	}
+
 	render() {
-		const store = configureStore({});
 		return (
-			<Provider store={store}>
-				<ConnectedRouter history={history}>
-					<Switch>
-						<Route exact path="/login" component={PublicRoutes} />
-						<Route path="/" component={ProtectedRoutes} />
-						<Route component={NotFound} />
-					</Switch>
-				</ConnectedRouter>
-			</Provider>
+			<ConnectedRouter history={history}>
+				<Switch>
+					<Route exact path="/login" component={PublicRoutes} />
+					<Route path="/" component={ProtectedRoutes} />
+					<Route component={NotFound} />
+				</Switch>
+			</ConnectedRouter>
 		);
 	}
 }
 
-export default App;
+const mapDispatchToProps = {
+	setBarEffort,
+	initAllRandomBars,
+};
+
+export default connect(null, mapDispatchToProps)(App);
