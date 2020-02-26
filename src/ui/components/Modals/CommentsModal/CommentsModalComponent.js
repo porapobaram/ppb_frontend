@@ -13,14 +13,21 @@ const CommentsModalComponent = ({ onClickHandler, comments }) => {
 	return (
 		<div className="modal-wrapper">
 			<div className="modal-header">
-				<button type="button" onClick={onClickHandler}>
-					Close
-				</button>
-				<p>Комментарии</p>
+				<p className="modal-title">Комментарии</p>
+				<div className="closed-btn-wrapper">
+					<div className="closed-btn" onClick={onClickHandler} />
+				</div>
 			</div>
-			<div className="modalItem-wrapper">
+			<div className="modal-container">
 				{comments && comments.map(item => <CommentsModalItem item={item} key={item.userId} />)}
 			</div>
+			<form className="modal-form">
+				<input className="modal-input" type="text" label="label" />
+				{/* <div className="add-btn" /> */}
+				{/* <button className="add-btn" type="submit">
+					Add
+				</button> */}
+			</form>
 		</div>
 	);
 };
