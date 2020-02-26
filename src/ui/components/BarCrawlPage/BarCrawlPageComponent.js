@@ -1,10 +1,7 @@
-/* eslint-disable react/button-has-type */
-/* eslint-disable react/no-this-in-sfc */
-/* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
 import BarCrawlItem from './BarCrawlItem';
 import { object, func, array } from 'prop-types';
-import './BarCrawlPageContainer.scss';
+import './BarCrawlPageComponent.scss';
 import lAr from './assets/lAr.svg';
 import rAr from './assets/rAr.svg';
 
@@ -14,9 +11,9 @@ const propTypes = {
 	onNextArrow: func,
 	onPreviousArrow: func,
 	barCrawlPageData: array,
+	Slider: func,
 };
 
-// eslint-disable-next-line react/prop-types
 class BarCrawlPageComponent extends React.Component {
 	constructor(props) {
 		super(props);
@@ -35,8 +32,8 @@ class BarCrawlPageComponent extends React.Component {
 	render() {
 		const { settings, onClickHandler, Slider, barCrawlPageData } = this.props;
 		return (
-			<div className="barcrawl-container">
-				<div className="barcrawl-wrapper">
+			<div className="barcrawl-wrapper">
+				<div className="barcrawl-container">
 					{barCrawlPageData && (
 						<Slider ref={c => (this.slider = c)} {...settings}>
 							{barCrawlPageData.map(item => {
@@ -45,7 +42,7 @@ class BarCrawlPageComponent extends React.Component {
 						</Slider>
 					)}
 				</div>
-				<div className="barcrawl-arr">
+				<div className="barcrawl-arrows">
 					<div>
 						<img alt="Left" src={rAr} onClick={this.previous} className="barcrawl-arr-left" />
 					</div>

@@ -1,13 +1,25 @@
-.barcrawl-container {
-	position: absolute;
+@import '../../styles/colors.scss';
+@import '../../styles/fonts.scss';
+
+.barcrawl-wrapper {
+  background-color: $main-purple;
+  overflow: hidden;
+  position: relative;
+  height: calc(100vh - 165px);
+  .barcrawl-container {
+	margin: 10px;
+  }
+  .barcrawl-arrows {
 	width: 100%;
-	height: calc(100% - 175px);
-	background-color: #381d5b;
-	.barcrawl-wrapper {
-		background-color: #381d5b;
-		margin-top: 10px;
-		padding: 10px;
-		height: calc(100% - 175px);
-		overflow: hidden;
+	display: flex;
+	justify-content: space-between;
+	height: 50px;
+	padding: 10px;
+	.barcrawl-arr-left {
+	  height: 50px;
 	}
+	.barcrawl-arr-right {
+	  height: 50px;
+	}
+  }
 }

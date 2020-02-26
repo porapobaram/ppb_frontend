@@ -21,7 +21,7 @@ const BarCrawlItem = ({ item, onClickHandler }) => {
 					<img alt="Bar" src={bcImage} className="bc-image" />
 				</div>
 				<div className="bc-left-block">
-					<h2 className="bc-name">{bcName}</h2>
+					<h2 className="bc-name">Ну и шо тут {bcName}</h2>
 					<p className="bc-time">{bcTime}</p>
 					<p className="bc-price">{bcPrice}</p>
 					<button className="bc-button" type="button" onClick={onClickHandler}>
@@ -29,7 +29,6 @@ const BarCrawlItem = ({ item, onClickHandler }) => {
 					</button>
 				</div>
 			</div>
-
 			<p className="bc-description">{bcDescription}</p>
 		</div>
 	);
