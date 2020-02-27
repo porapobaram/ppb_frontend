@@ -2,12 +2,47 @@
 @import '../../../../styles/fonts.scss';
 @import '../../../../styles/reset.scss';
 
+// .modalItem-container {
+// 	width: 100%;
+// 	margin-top: 10px;
+// 	margin-bottom: 10px;
+// 	color: #cccccc;
+// 	border-radius: 10px;
+// 	padding: 10px;
+// }
+
 .modalItem-container {
-	width: 100%;
-	margin-top: 10px;
-	margin-bottom: 10px;
-	color: #cccccc;
-	background-color: $main-purple;
 	border-radius: 10px;
-	padding: 10px;
+	background-color: $main-purple;
+	max-width: 100%;
+	// margin-right: 10px;
+	// margin-left: 10px;
+	margin: 10px;
+	padding: 5px;
+	color: #cccccc;
+	display: flex;
+	// align-items: center;
+	align-items: flex-start;
+    .modalItem-userPic-container {
+		margin-right: 10px;
+		.modalItem-userPic {
+		width: 35px;
+		height: 35px;
+		border-radius: 50%;
+		object-fit: cover;
+	}
+}   
+.modalItem-userText-container {
+.modalItem-userName {
+		font-family: 'Roboto-Medium';
+		margin-bottom: 10px;
+		color: $white;
+	}
+	.modalItem-userComment{
+		font-family: 'Roboto-Regular';
+		font-size: 14px;
+		line-height: 16px;
+	}
+}
+	
 }
