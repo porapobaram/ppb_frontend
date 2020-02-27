@@ -14,7 +14,7 @@ const propTypes = {
 function CustomMarker({ position, name, link, image, sex }) {
 	const arr = position.split(',');
 	const markerPosition = { lat: +arr[0], lng: +arr[1] };
-	const offsetInfoWindow = { lat: markerPosition.lat + 0.00001, lng: markerPosition.lng };
+	const offsetInfoWindow = { lat: markerPosition.lat + 0.000013, lng: markerPosition.lng };
 	let iconCustom = {};
 
 	if (sex === 'm') {
