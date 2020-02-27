@@ -1,19 +1,62 @@
-* {
-  margin: 0;
-  padding: 0;
+@import "../../styles/reset.scss";
+@import '../../styles/colors.scss';
+@import '../../styles/fonts.scss';
+
+.wrapperWindow {
+  padding: 0 0 5px 0;
+  img {
+    width: 100%;
+    height: auto;
+    text-align: center;
+  }
+  h4 {
+    text-align: center;
+    font-family: 'Roboto-Bold';
+    font-size: 28px;
+    color: #666666;
+    padding: 15px 0 20px 0;
+  }
+  .linkMessage {
+    text-align: center;
+    background-color: $main-blue;
+    border-radius: 126px 126px 126px 126px;
+    -moz-border-radius: 126px 126px 126px 126px;
+    -webkit-border-radius: 126px 126px 126px 126px;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 210px;
+    height: 65px;
+    a {
+      display: block;
+      height: 100%;
+      padding-top: 15px;
+      text-decoration: none;
+      line-height: 1.8;
+      letter-spacing: 1px;
+      outline: none;
+      color: $white;
+      text-transform: uppercase;
+      font-family: 'Roboto-Medium';
+      font-size: 20px;
+    }
+  }
 }
 .wrapper {
   width: 100%;
   list-style: none;
   background-color: gray;
 }
-#example-app{
+#map-style{
+  //width: 100%;
+  //height: calc(100% - 175px);
   margin: 0;
   padding: 0;
-  height:650px;
+  height: 650px;
   width: 412px;
 }
-
-.noMarker {
-  dispaly: none;
-}
+//.noMarker {
+//  display: none;
+//}

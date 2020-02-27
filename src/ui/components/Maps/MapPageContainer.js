@@ -46,8 +46,8 @@ class MapPageContainer extends Component {
 
 	componentDidMount() {
 		this.props.getCurrentUsers();
-		this.props.setMapState(MAP_STAGE.DIRECTION);
-		// this.props.setMapState(MAP_STAGE.PEOPLENEARBY);
+		// this.props.setMapState(MAP_STAGE.DIRECTION);
+		this.props.setMapState(MAP_STAGE.PEOPLENEARBY);
 		// this.props.setMapState(MAP_STAGE.DISABLED);
 
 		// setTimeout(this.currentPosition(), 5000);
@@ -133,7 +133,7 @@ class MapPageContainer extends Component {
 			<div>
 				<LoadScript id="script-loader" loadingElement={<Spinner />} googleMapsApiKey={GOOGLE_API_KEY}>
 					{!isLoading ? (
-						<GoogleMap id="example-app" zoom={8} center={locationPosition}>
+						<GoogleMap id="map-style" zoom={8} center={locationPosition}>
 							{positionBar !== '' && locationPosition !== '' && (
 								<DirectionsService
 									options={{
@@ -166,7 +166,7 @@ class MapPageContainer extends Component {
 			<div>
 				<LoadScript id="script-loader" loadingElement={<Spinner />} googleMapsApiKey={GOOGLE_API_KEY}>
 					{!isLoading ? (
-						<GoogleMap id="example-app" zoom={8} center={locationPosition}>
+						<GoogleMap id="map-style" zoom={8} center={locationPosition}>
 							{currentUsers.map((user, id) => {
 								return (
 									<CustomMarker

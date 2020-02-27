@@ -1,6 +1,7 @@
 import React from 'react';
 import { Marker, InfoWindow } from '@react-google-maps/api';
 import { string } from 'prop-types';
+import './mapPageComponent.scss';
 
 const propTypes = {
 	position: string,
@@ -14,18 +15,33 @@ function CustomMarker({ position, name, link, image, sex }) {
 	const arr = position.split(',');
 	const markerPosition = { lat: +arr[0], lng: +arr[1] };
 	const offsetInfoWindow = { lat: markerPosition.lat + 0.00001, lng: markerPosition.lng };
+	let iconCustom = {};
+
+	if (sex === 'm') {
+		iconCustom = { url: require('./assets/man.jpg'), scaledSize: { width: 70, height: 70 } };
+	} else iconCustom = { url: require('./assets/woman.jpg'), scaledSize: { width: 70, height: 70 } };
+
 	return (
 		<div>
-			<Marker position={markerPosition}>
-				{/* //add check on marker style based on user.sex */}
-				<InfoWindow
-					position={offsetInfoWindow}
-					icon="https://www.google.com/search?q=%D0%B4%D0%B5%D0%B2%D1%83%D1%88%D0%BA%D0%B0&rlz=1C1CHBD_ruUA868UA868&sxsrf=ALeKk00TgvsmGUrWmitv_YThNGLRGnSb9Q:1582723244864&source=lnms&tbm=isch&sa=X&ved=2ahUKEwjer6bGp-_nAhXokYsKHRe0AsgQ_AUoAXoECA8QAw&biw=1366&bih=625#imgrc=3Y9aTJggHq0ATM"
-				>
-					<div>
+			<Marker position={markerPosition} icon={iconCustom}>
+				<InfoWindow position={offsetInfoWindow} icon={image}>
+					<div className="wrapperWindow">
+						{sex === 'm' ? (
+							<img
+								src="https://scontent.fiev23-1.fna.fbcdn.net/v/t1.0-9/34319927_381165959060750_3422982299463974912_n.jpg?_nc_cat=105&_nc_ohc=i8v1I9oi76QAX_Oh6DC&_nc_ht=scontent.fiev23-1.fna&oh=8bd3a0c98f74768517d6ac084e9f1df8&oe=5EBB4AAF"
+								alt={`user${name}`}
+							/>
+						) : (
+							<img
+								src="https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+								alt={`user${name}`}
+							/>
+						)}
+
 						<h4>{name}</h4>
-						{/* <img src={image}  alt={`user${name}`} width="50" height="50" /> */}
-						<p>link={link}</p>
+						<div className="linkMessage">
+							<a href={link}>message</a>
+						</div>
 					</div>
 				</InfoWindow>
 			</Marker>
