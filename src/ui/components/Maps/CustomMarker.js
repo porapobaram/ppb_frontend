@@ -11,7 +11,7 @@ const propTypes = {
 	sex: string,
 };
 
-function CustomMarker({ position, name, link, image, sex }) {
+const CustomMarker = ({ position, name, link, image, sex }) => {
 	const arr = position.split(',');
 	const markerPosition = { lat: +arr[0], lng: +arr[1] };
 	const offsetInfoWindow = { lat: markerPosition.lat + 0.000013, lng: markerPosition.lng };
@@ -47,7 +47,7 @@ function CustomMarker({ position, name, link, image, sex }) {
 			</Marker>
 		</div>
 	);
-}
+};
 
 CustomMarker.propTypes = propTypes;
 export default CustomMarker;
