@@ -3,7 +3,7 @@ export const data = [
 		userId: '11',
 		userName: 'Блабла бла',
 		userComment: 'Глава парламенту Дмитро Разумков анонсував 18 жовтня перше читання проекту Державного бюджету.',
-		userPic: 'https://gdb.rferl.org/EEB92EBF-28BD-4EE9-BD0C-B6DD9CD37C3F_w144_r1.jpg',
+		userPic: 'https://gdb.rferl.org/4ABFC512-F0A8-47D5-B2E6-5A54AF9E33D7_w144_r1.jpg',
 	},
 
 	{
@@ -11,14 +11,14 @@ export const data = [
 		userName: 'Блабла бла',
 		userComment:
 			'Глава парламенту Дмитро Разумков анонсував 18 жовтня перше читання проекту Державного бюджету України на 2020 рік. Радіо Свобода зібрало запропоновані Міністерством фінансів «основні цифри» бюджету – в інфографіку.',
-		userPic: 'https://gdb.rferl.org/EEB92EBF-28BD-4EE9-BD0C-B6DD9CD37C3F_w144_r1.jpg',
+		userPic: 'https://gdb.rferl.org/4ABFC512-F0A8-47D5-B2E6-5A54AF9E33D7_w144_r1.jpg',
 	},
 
 	{
 		userId: '3',
 		userName: 'Блабла бла',
 		userComment: 'Глава парламенту Дмитро Разумков анонсував 18 жовтня .',
-		userPic: 'https://gdb.rferl.org/EEB92EBF-28BD-4EE9-BD0C-B6DD9CD37C3F_w144_r1.jpg',
+		userPic: 'https://gdb.rferl.org/4ABFC512-F0A8-47D5-B2E6-5A54AF9E33D7_w144_r1.jpg',
 	},
 
 	{
@@ -26,7 +26,7 @@ export const data = [
 		userName: 'Блабла бла',
 		userComment:
 			'Глава парламенту Дмитро Разумков анонсував 18 жовтня перше читання проекту Державного бюджету України на 2020 рік. Радіо Свобода зібрало запропоновані Міністерством фінансів «основні цифри» бюджету – в інфографіку.',
-		userPic: 'https://gdb.rferl.org/EEB92EBF-28BD-4EE9-BD0C-B6DD9CD37C3F_w144_r1.jpg',
+		userPic: 'https://gdb.rferl.org/4ABFC512-F0A8-47D5-B2E6-5A54AF9E33D7_w144_r1.jpg',
 	},
 
 	{
@@ -34,14 +34,14 @@ export const data = [
 		userName: 'Блабла бла',
 		userComment:
 			'Глава парламенту Дмитро Разумков анонсував 18 жовтня перше читання проекту Державного бюджету України на 2020 рік. Радіо Свобода зібрало запропоновані Міністерством фінансів «основні цифри» бюджету – в інфографіку.',
-		userPic: 'https://gdb.rferl.org/EEB92EBF-28BD-4EE9-BD0C-B6DD9CD37C3F_w144_r1.jpg',
+		userPic: 'https://gdb.rferl.org/4ABFC512-F0A8-47D5-B2E6-5A54AF9E33D7_w144_r1.jpg',
 	},
 	{
 		userId: '11333',
 		userName: 'Блабла бла',
 		userComment:
 			'Глава парламенту Дмитро Разумков анонсував 18 жовтня перше читання проекту Державного бюджету України на 2020 рік. Радіо Свобода зібрало запропоновані Міністерством фінансів «основні цифри» бюджету – в інфографіку.',
-		userPic: 'https://gdb.rferl.org/EEB92EBF-28BD-4EE9-BD0C-B6DD9CD37C3F_w144_r1.jpg',
+		userPic: 'https://gdb.rferl.org/4ABFC512-F0A8-47D5-B2E6-5A54AF9E33D7_w144_r1.jpg',
 	},
 
 	{
@@ -49,7 +49,7 @@ export const data = [
 		userName: 'Блабла бла',
 		userComment:
 			'Глава парламенту Дмитро Разумков анонсував 18 жовтня перше читання проекту Державного бюджету України на 2020 рік. Радіо Свобода зібрало запропоновані Міністерством фінансів «основні цифри» бюджету – в інфографіку.',
-		userPic: 'https://gdb.rferl.org/EEB92EBF-28BD-4EE9-BD0C-B6DD9CD37C3F_w144_r1.jpg',
+		userPic: 'https://gdb.rferl.org/4ABFC512-F0A8-47D5-B2E6-5A54AF9E33D7_w144_r1.jpg',
 	},
 
 	{
@@ -57,7 +57,7 @@ export const data = [
 		userName: 'BLALALALALA',
 		userComment:
 			'Глава парламенту Дмитро Разумков анонсував 18 жовтня перше читання проекту Державного бюджету України на 2020 рік. Радіо Свобода зібрало запропоновані Міністерством фінансів «основні цифри» бюджету – в інфографіку.',
-		userPic: 'https://gdb.rferl.org/EEB92EBF-28BD-4EE9-BD0C-B6DD9CD37C3F_w144_r1.jpg',
+		userPic: 'https://gdb.rferl.org/4ABFC512-F0A8-47D5-B2E6-5A54AF9E33D7_w144_r1.jpg',
 	},
 
 	{
@@ -65,7 +65,7 @@ export const data = [
 		userName: 'BLALALALALA',
 		userComment:
 			'Глава парламенту Дмитро Разумков анонсував 18 жовтня перше читання проекту Державного бюджету України на 2020 рік. Радіо Свобода зібрало запропоновані Міністерством фінансів «основні цифри» бюджету – в інфографіку.',
-		userPic: 'https://gdb.rferl.org/EEB92EBF-28BD-4EE9-BD0C-B6DD9CD37C3F_w144_r1.jpg',
+		userPic: 'https://gdb.rferl.org/4ABFC512-F0A8-47D5-B2E6-5A54AF9E33D7_w144_r1.jpg',
 	},
 
 	{
@@ -73,6 +73,6 @@ export const data = [
 		userName: 'BLALALALALA',
 		userComment:
 			'Глава парламенту Дмитро Разумков анонсував 18 жовтня перше читання проекту Державного бюджету України на 2020 рік. Радіо Свобода зібрало запропоновані Міністерством фінансів «основні цифри» бюджету – в інфографіку.',
-		userPic: 'https://gdb.rferl.org/EEB92EBF-28BD-4EE9-BD0C-B6DD9CD37C3F_w144_r1.jpg',
+		userPic: 'https://gdb.rferl.org/4ABFC512-F0A8-47D5-B2E6-5A54AF9E33D7_w144_r1.jpg',
 	},
 ];

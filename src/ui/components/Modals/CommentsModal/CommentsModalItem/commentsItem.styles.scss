@@ -2,14 +2,6 @@
 @import '../../../../styles/fonts.scss';
 @import '../../../../styles/reset.scss';
 
-// .modalItem-container {
-// 	width: 100%;
-// 	margin-top: 10px;
-// 	margin-bottom: 10px;
-// 	color: #cccccc;
-// 	border-radius: 10px;
-// 	padding: 10px;
-// }
 
 .modalItem-container {
 	border-radius: 10px;
@@ -33,16 +25,14 @@
 	}
 }   
 .modalItem-userText-container {
-.modalItem-userName {
-		font-family: 'Roboto-Medium';
-		margin-bottom: 10px;
-		color: $white;
-	}
-	.modalItem-userComment{
-		font-family: 'Roboto-Regular';
-		font-size: 14px;
-		line-height: 16px;
-	}
-}
-	
+	.modalItem-userName {
+			font-family: 'Roboto-Medium';
+			margin-bottom: 10px;
+			color: $white;
+		}
+		.modalItem-userComment{
+			font-family: 'Roboto-Regular';
+			font-size: 14px;
+		}
+	}	
 }
