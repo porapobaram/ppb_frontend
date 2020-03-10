@@ -1,9 +1,20 @@
-@import "../../styles/reset.scss";
 @import '../../styles/colors.scss';
 @import '../../styles/fonts.scss';
 
+.gm-style .gm-style-iw-c {
+  border-radius: 60px 60px 60px 60px !important;
+  -moz-border-radius: 60px 60px 60px 60px !important;
+  -webkit-border-radius: 60px 60px 60px 60px !important;
+  padding: 0 !important;
+  overflow: none !important;
+}
+.gm-style-iw-d {
+  overflow: hidden !important;
+  padding-bottom: 10px;
+  max-width: 250px !important;
+  max-height: 370px !important;
+}
 .wrapperWindow {
-  padding: 0 0 5px 0;
   img {
     width: 100%;
     height: auto;
@@ -12,9 +23,9 @@
   h4 {
     text-align: center;
     font-family: 'Roboto-Bold';
-    font-size: 28px;
+    font-size: 25px;
     color: #666666;
-    padding: 15px 0 20px 0;
+    padding: 5px 0 5px 0;
   }
   .linkMessage {
     text-align: center;
@@ -27,14 +38,13 @@
     left: 0;
     right: 0;
     bottom: 0;
-    width: 210px;
-    height: 65px;
+    width: 130px;
+    height: 40px;
     a {
       display: block;
       height: 100%;
-      padding-top: 15px;
       text-decoration: none;
-      line-height: 1.8;
+      line-height: 1.9;
       letter-spacing: 1px;
       outline: none;
       color: $white;
