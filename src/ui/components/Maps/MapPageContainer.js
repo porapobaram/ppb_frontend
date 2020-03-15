@@ -6,7 +6,14 @@ import './mapPageComponent.scss';
 import { connect } from 'react-redux';
 import { func, string, object, array } from 'prop-types';
 import { GOOGLE_API_KEY, MAP_STAGE } from '../../../config';
-import { DirectionsRenderer, DirectionsService, GoogleMap, LoadScript } from '@react-google-maps/api';
+import {
+	DirectionsRenderer,
+	DirectionsService,
+	GoogleMap,
+	LoadScript,
+	MarkerClusterer,
+	Marker,
+} from '@react-google-maps/api';
 import { Spinner } from '../Spinner';
 import CustomMarker from './CustomMarker';
 
@@ -35,6 +42,8 @@ class MapPageContainer extends Component {
 			locationPosition: {},
 			travelMode: 'WALKING',
 			response: null,
+			clickedMarker: false,
+			marker: '',
 		};
 
 		this.directionsCallback = this.directionsCallback.bind(this);
@@ -42,6 +51,7 @@ class MapPageContainer extends Component {
 		this.renderCurrentUsers = this.renderCurrentUsers.bind(this);
 		this.renderBarNotChoose = this.renderBarNotChoose.bind(this);
 		this.currentPosition = this.currentPosition.bind(this);
+		this.onMarkerClick = this.onMarkerClick.bind(this);
 	}
 
 	componentDidMount() {
@@ -52,8 +62,8 @@ class MapPageContainer extends Component {
 
 		// setTimeout(this.currentPosition(), 5000);
 		this.currentPosition();
-		const TEST = { lat: 48.379433, lng: 31.16558 };
-		this.props.setMyLocation(TEST)
+		// const TEST = { lat: 48.379433, lng: 31.16558 };
+		// this.props.setMyLocation(TEST);
 	}
 
 	componentDidUpdate(prevProps) {
@@ -80,9 +90,7 @@ class MapPageContainer extends Component {
 				// <ModalRoot />;
 			}
 			// setTimeout(setMyLocation(locationPositionToRedux), 10000);
-
 		}
-
 	}
 
 	currentPosition = () => {
@@ -110,6 +118,12 @@ class MapPageContainer extends Component {
 		);
 	};
 
+	onMarkerClick = idx => {
+		this.state.clickedMarker
+			? this.setState({ clickedMarker: false })
+			: this.setState({ clickedMarker: true, marker: idx });
+	};
+
 	directionsCallback = (response, result) => {
 		console.log({ response });
 		if (response !== null) {
@@ -125,7 +139,7 @@ class MapPageContainer extends Component {
 
 	renderDirection = () => {
 		const { isLoading, locationPosition, travelMode, response } = this.state;
-		const { positionBar, locationToBar, setMyLocation } = this.props;
+		const { positionBar, locationToBar /* , setMyLocation */ } = this.props;
 		console.log(`barLONG${JSON.stringify(positionBar)}`);
 		console.log(`locationPositionLONG${JSON.stringify(locationPosition)}`);
 
@@ -159,14 +173,38 @@ class MapPageContainer extends Component {
 	};
 
 	renderCurrentUsers = () => {
-		const { isLoading, locationPosition } = this.state;
+		const { isLoading, locationPosition, clickedMarker, marker } = this.state;
 		const { currentUsers } = this.props;
+		const locations = [
+			{ lat: 50.4397541, lng: 30.516102 },
+			{ lat: 50.4401, lng: 30.518 },
+			{ lat: 50.4397543, lng: 30.516105 },
+			{ lat: 50.4403, lng: 30.521 },
+			{ lat: 50.4397545, lng: 30.516107 },
+			{ lat: 50.4405, lng: 30.524 },
+		];
+
+		const iconCustom = { url: require('./assets/man.png'), scaledSize: { width: 70, height: 70 } };
+		const options = {
+			imagePath: 'https://i.ibb.co/WH9NwrR/clusters.png/m',
+			maxZoom: 50,
+			gridSize: 25,
+			// imagePath: './assets/clusters.png/m',
+		};
 
 		return (
 			<div>
 				<LoadScript id="script-loader" loadingElement={<Spinner />} googleMapsApiKey={GOOGLE_API_KEY}>
 					{!isLoading ? (
 						<GoogleMap id="map-style" zoom={8} center={locationPosition}>
+							<MarkerClusterer options={options}>
+								{clusterer =>
+									locations.map((location, i) => (
+										<Marker key={i} position={location} clusterer={clusterer} icon={iconCustom} />
+									))
+								}
+							</MarkerClusterer>
+
 							{currentUsers.map((user, id) => {
 								return (
 									<CustomMarker
@@ -176,6 +214,10 @@ class MapPageContainer extends Component {
 										sex={user.sex}
 										link={user.link}
 										position={user.ll}
+										onMarkerClick={this.onMarkerClick}
+										clickedMarker={clickedMarker}
+										idx={id}
+										marker={marker}
 									/>
 								);
 							})}
