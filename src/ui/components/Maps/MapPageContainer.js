@@ -89,7 +89,9 @@ class MapPageContainer extends Component {
 				console.log(`осталось 50 м`);
 				// <ModalRoot />;
 			}
-			// setTimeout(setMyLocation(locationPositionToRedux), 10000);
+			// setTimeout(() => {
+			// 	setMyLocation(locationPositionToRedux);
+			// }, 1000);
 		}
 	}
 

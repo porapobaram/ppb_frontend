@@ -12,7 +12,7 @@ export const setMapState = mapState => dispatch => {
 };
 
 export const setMyLocation = locationToBar => dispatch => {
-	console.log(`ACTIONlocationToBar${JSON.stringify(locationToBar)}`);
+	// console.log(`ACTIONlocationToBar${JSON.stringify(locationToBar)}`);
 	dispatch({ type: SET_MY_LOCATION, payload: locationToBar });
-	console.log(`locationToBar${JSON.stringify(locationToBar)}`);
+	// console.log(`locationToBar${JSON.stringify(locationToBar)}`);
 };

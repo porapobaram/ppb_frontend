@@ -9,10 +9,10 @@ const propTypes = {
 	link: string,
 	image: string,
 	sex: string,
+	marker: string,
 	onMarkerClick: func,
 	clickedMarker: bool,
 	idx: number,
-	marker: number,
 };
 
 const CustomMarker = ({ position, name, link, image, sex, onMarkerClick, clickedMarker, idx, marker }) => {
